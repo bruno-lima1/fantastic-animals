@@ -12,6 +12,3 @@ O projeto consiste em uma landing page para praticar algumas funcionalidades com
 
 ## Layout web
 <img src="https://github.com/brunocesar2/animais-fantasticos/assets/111947999/8be9565f-97ae-4673-a3ec-8cec1f881f99" width="800px">
-
-## Tecnologias utilizadas
-- HTML / CSS / JS
