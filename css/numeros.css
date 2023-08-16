@@ -1,0 +1,40 @@
+.numeros {
+  grid-column: 2/4;
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  padding: 4rem 0;
+}
+.numeros .titulo {
+  padding-bottom: 2rem;
+}
+.numeros-sobre {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-area: 2/2;
+  gap: 4rem;
+}
+.numeros-sobre h3 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+.numeros-sobre span {
+  color: #ee5544;
+  font-size: 24px;
+  font-weight: bold;
+  display: block;
+}
+@media (max-width: 800px) {
+  .numeros {
+    padding: 0 0.75rem 2.5rem 0.75rem;
+  }
+  .numeros .titulo {
+    padding-bottom: 1rem;
+  }
+  .numeros-sobre {
+    grid-area: 2/1;
+    gap: 2rem;
+  }
+  .numeros-sobre h3 {
+    font-size: 24px;
+  }
+}

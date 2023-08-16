@@ -1,0 +1,10 @@
+import initTabNav from "./modules/tab-nav.js";
+import initAccordionNav from "./modules/accordion-nav.js";
+import initSmoothScroll from "./modules/smooth-scroll.js";
+import initScrollAnimation from "./modules/scroll-animation.js";
+import initModal from "./modules/modal.js";
+initTabNav();
+initAccordionNav();
+initSmoothScroll();
+initScrollAnimation();
+initModal();

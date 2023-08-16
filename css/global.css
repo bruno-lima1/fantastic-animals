@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
+body {
+  margin: 0px;
+  font-family: "Rubik", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+ul,
+p,
+blockquote,
+dl,
+dd {
+  margin: 0px;
+}
+ul {
+  padding: 0px;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+p,
+dd {
+  line-height: 1.5;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 120px minmax(300px, 800px) 1fr;
+}
+[data-scroll-animation] {
+  opacity: 0;
+  transition: 0.6s;
+  transform: translate3d(-80px, 0, 0);
+}
+[data-scroll-animation].active {
+  opacity: 1;
+  transition: 0.9s;
+  transform: translate3d(0, 0, 0);
+}
+@media (prefers-color-scheme: light) {
+  body {
+    background: #fff;
+    color: #333;
+  }
+  .faq button {
+    background: #fff;
+  }
+  .faq button::after {
+    background: url(../img/icons8-expand-arrow-32.png);
+  }
+  .modal {
+    background: #fff;
+    box-shadow: 0 0 0 10px #fff;
+  }
+  .modal input {
+    border: 1px solid #ccc;
+    background: #fff;
+    color: #000;
+  }
+  .modal .modal-close {
+    border: 5px solid #fff;
+  }
+  .modal input:focus {
+    background: #eee;
+  }
+  .titulo {
+  color: #000;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #000;
+    color: #ccc;
+  }
+  .faq button {
+    background: #000;
+  }
+  .faq button::after {
+    background: url(../img/icons8-expand-arrow-32-dark.png);
+  }
+  .modal {
+    background: #555;
+    box-shadow: 0 0 0 10px #555;
+  }
+  .modal input {
+    border: 1px solid #333;
+    background: #555;
+    color: #fff;
+  }
+  .modal .modal-close {
+    border: 5px solid #555;
+  }
+  .modal input:focus {
+    background: #666;
+  }
+}

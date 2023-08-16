@@ -1,0 +1,11 @@
+@import "./global.css";
+@import "./utilidades/componentes.css";
+
+@import "./header.css";
+@import "./introducao.css";
+@import "./faq.css";
+@import "./slide.css";
+@import "./numeros.css";
+@import "./contato.css";
+@import "./copy.css";
+@import "./modal.css";

@@ -1,0 +1,68 @@
+.faq {
+  grid-column: 2/4;
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  padding-bottom: 4rem;
+}
+.faq .titulo {
+  grid-column: 1/4;
+  padding-bottom: 2rem;
+}
+.faq dl {
+  grid-column: 2;
+}
+.faq button {
+  border: none;
+  display: flex;
+  cursor: pointer;
+  padding-left: 0;
+}
+.faq button::before {
+  content: "";
+  background: #fb5;
+  width: 20px;
+  height: 10px;
+}
+.faq button::after {
+  content: "";
+  background-size: cover;
+  width: 22px;
+  height: 22px;
+  transition: 0.3s;
+}
+.faq dt {
+  position: relative;
+}
+.faq dd {
+  display: none;
+  padding-left: 28px;
+}
+.faq dd.active {
+  display: block;
+  animation: accordionNav 0.5s forwards;
+}
+.faq button[aria-expanded="true"]::after {
+  transform: rotate(180deg);
+}
+@keyframes accordionNav {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 95px;
+  }
+}
+@media (max-width: 800px) {
+  .faq {
+    grid-template-columns: 1fr;
+    padding: 0 0.75rem 2.5rem 0.75rem;
+  }
+  .faq .titulo {
+    padding-bottom: 1rem;
+  }
+  .faq dl {
+    grid-column: 1/3;
+  }
+}

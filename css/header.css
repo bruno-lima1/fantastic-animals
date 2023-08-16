@@ -1,0 +1,22 @@
+.header {
+  background: #ffbb55;
+  grid-column: 3/5;
+  margin: 2rem 0;
+}
+.header-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+.header-menu a {
+  color: #000;
+  padding: 15px 8px;
+  display: block;
+}
+@media (max-width: 800px) {
+  .header {
+    grid-column: 1/5;
+    margin: 0 0 1rem 0;
+  }
+}
