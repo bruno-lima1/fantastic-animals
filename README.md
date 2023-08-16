@@ -7,8 +7,9 @@ Criado no curso de JavaScript da Origamid.
 O projeto consiste em uma landing page para praticar algumas funcionalidades com JavaScript. 
 
 ## Layout mobile
-<img src="https://github.com/brunocesar2/animais-fantasticos/assets/111947999/5f02f355-3009-4e29-9303-37fd6341c583" width="270px">
-<img src="https://github.com/brunocesar2/animais-fantasticos/assets/111947999/1a950b7d-1a2f-494b-bdb9-3aa9346b368e" width="270px">
+<img src="https://github.com/brunocesar2/animais-fantasticos/assets/111947999/73a196da-a42f-4f04-9b6a-e8d7295e4230" width="270px">
+<img src="https://github.com/brunocesar2/animais-fantasticos/assets/111947999/489467d2-9828-4910-aa3f-18f8c92229f1" width="270px">
 
 ## Layout web
-<img src="https://github.com/brunocesar2/animais-fantasticos/assets/111947999/8be9565f-97ae-4673-a3ec-8cec1f881f99" width="800px">
+<img src="https://github.com/brunocesar2/animais-fantasticos/assets/111947999/bd201356-68c1-4ac6-8fa5-00954cfe2bc8" width="800px">
+<img src="https://github.com/brunocesar2/animais-fantasticos/assets/111947999/da74042f-d829-4e66-8a6f-d8b5c55b9bab" width="800px">
