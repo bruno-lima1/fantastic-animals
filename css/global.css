@@ -37,12 +37,11 @@ dd {
 }
 [data-scroll-animation] {
   opacity: 0;
-  transition: 0.6s;
-  transform: translate3d(-80px, 0, 0);
+  transform: translate3d(-100px, 0, 0);
+  transition: .5s;
 }
 [data-scroll-animation].active {
   opacity: 1;
-  transition: 0.9s;
   transform: translate3d(0, 0, 0);
 }
 @media (prefers-color-scheme: light) {
