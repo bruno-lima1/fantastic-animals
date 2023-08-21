@@ -7,10 +7,10 @@ export default function initTabNav() {
       content.forEach((info) => {
         info.classList.remove("active");
       });
-      content[index].classList.add("active");
+      content[index].classList.toggle("active");
     }
-    menu.forEach((image, index) => {
-      image.addEventListener("click", () => {
+    menu.forEach((images, index) => {
+      images.addEventListener("click", () => {
         activeContent(index);
       });
     });
