@@ -6,12 +6,12 @@ export default function initModal() {
     ["touchstart", "click"].forEach((userEvent) => {
       open.addEventListener(userEvent, handleModal);
       close.addEventListener(userEvent, handleModal);
-      container.addEventListener(userEvent, closeModal);
+      container.addEventListener(userEvent, outsideClick);
     });
     function handleModal() {
       container.classList.toggle("active");
     }
-    function closeModal(event) {
+    function outsideClick(event) {
       if (event.target === this) {
         container.classList.remove("active");
       }
