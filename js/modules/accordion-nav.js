@@ -4,8 +4,7 @@ export default function initAccordionNav() {
   if (responses.length && questions.length) {
     responses[0].classList.add("active");
     questions.forEach((question) => {
-        question.addEventListener("click", activeResponse);
-      });
+      question.addEventListener("click", activeResponse);
     });
     function activeResponse(event) {
       const controls = event.currentTarget.getAttribute("aria-controls");
