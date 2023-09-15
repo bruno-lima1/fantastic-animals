@@ -73,6 +73,9 @@ dd {
   .titulo {
   color: #000;
   }
+  [data-semana]::after {
+    border: 2px solid #000;
+  }
 }
 @media (prefers-color-scheme: dark) {
   body {
@@ -99,5 +102,8 @@ dd {
   }
   .modal input:focus {
     background: #666;
+  }
+  [data-semana]::after {
+    border: 2px solid #fff;
   }
 }

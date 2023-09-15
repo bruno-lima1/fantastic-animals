@@ -36,6 +36,14 @@
   height: 10px;
   left: -30px;
 }
+[data-semana]::after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background: #f33;
+  border-radius: 50%;
+  margin-left: 5px;
+}
 @media (max-width: 800px) {
   .contato {
     grid-template-columns: 1fr;
