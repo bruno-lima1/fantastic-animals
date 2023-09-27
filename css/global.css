@@ -38,11 +38,24 @@ dd {
 [data-scroll-animation] {
   opacity: 0;
   transform: translate3d(-100px, 0, 0);
-  transition: .5s;
+  transition: 0.5s;
 }
 [data-scroll-animation].active {
   opacity: 1;
   transform: translate3d(0, 0, 0);
+}
+[data-week]::after {
+  display: inline-block;
+  content: "";
+  width: 15px;
+  height: 15px;
+  background: rgb(255, 0, 0);
+  border-radius: 50%;
+  margin: 0 0 1px 4px;
+  cursor: pointer;
+}
+[data-week].open::after {
+  background: rgb(13, 255, 0);
 }
 @media (prefers-color-scheme: light) {
   body {
@@ -71,9 +84,12 @@ dd {
     background: #eee;
   }
   .titulo {
-  color: #000;
+    color: #000;
   }
-  [data-semana]::after {
+  [data-week]::after {
+    border: 2px solid #000;
+  }
+  [data-week].open::after {
     border: 2px solid #000;
   }
 }
@@ -103,7 +119,10 @@ dd {
   .modal input:focus {
     background: #666;
   }
-  [data-semana]::after {
-    border: 2px solid #fff;
+  [data-week]::after {
+    border: 2px solid #ffffff;
+  }
+  [data-week].open::after {
+    border: 2px solid #ffffff;
   }
 }
