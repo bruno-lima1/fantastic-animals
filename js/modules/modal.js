@@ -8,7 +8,8 @@ export default function initModal() {
       close.addEventListener(userEvent, handleModal);
       container.addEventListener(userEvent, outsideClick);
     });
-    function handleModal() {
+    function handleModal(event) {
+      event.preventDefault();
       container.classList.toggle("active");
     }
     function outsideClick(event) {
