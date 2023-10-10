@@ -2,9 +2,7 @@
 
 ## Sobre o projeto
 
-Criado no curso de JavaScript da Origamid.
-
-O projeto consiste em uma landing page para praticar algumas funcionalidades com JavaScript. 
+Este repositório contém um projeto criado como parte do curso de javascript da origamid.
 
 ## Layout mobile
 <img src="https://github.com/brunocesar2/animais-fantasticos/assets/111947999/73a196da-a42f-4f04-9b6a-e8d7295e4230" width="270px">
