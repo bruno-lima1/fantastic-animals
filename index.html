@@ -15,9 +15,18 @@
   <div data-grid-container class="grid-container">
     <header class="header">
       <nav>
+        <button data-menu="button" aria-expanded="false" aria-controls="menu">Menu</button>
         <ul class="header-menu" data-smooth-scroll data-menu="list" id="menu">
           <li><a href="#animais">ANIMAIS</a></li>
-          <li><a href="./">SOBRE</a></li>
+          <li data-dropdown>
+            <a href="./">SOBRE</a> 
+            <ul class="dropdown-menu">
+              <li><a href="./">A Empresa</a></li>
+              <li><a href="./">Equipe</a></li>
+              <li><a href="./">Socios</a></li>
+              <li><a href="./">Investidores</a></li>
+            </ul>
+          </li>
           <li><a href="#faq">FAQ</a></li>
           <li><a href="#contato">CONTATO</a></li>
           <li><a data-modal-open href="./">LOGIN ►</a></li>
