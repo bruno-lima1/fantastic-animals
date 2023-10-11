@@ -1,5 +1,6 @@
 .dropdown-menu {
   display: none;
+<<<<<<< HEAD
   background: #e54;
   position: absolute;
   border: 2px solid rgb(0, 0, 0);
@@ -15,10 +16,13 @@
   border-bottom: 12px solid #e54;
   border-right: 12px solid transparent;
   border-left: 12px solid transparent
+=======
+>>>>>>> a761608ed217dd6118fbd98ac94fdfb7ba0e6eae
 }
 [data-dropdown]:hover .dropdown-menu,
 [data-dropdown].active .dropdown-menu {
   display: block;
+<<<<<<< HEAD
   animation: animationUp .5s forwards;
 }
 @keyframes animationUp {
@@ -31,3 +35,37 @@
     transform: translate3d(0, 0, 0)
   }
 }
+=======
+  animation: dropdown-menu .5s forwards;
+}
+@keyframes dropdown-menu {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 30px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+.dropdown-menu {
+  position: absolute;
+  background: #e54;
+  border: 2px solid #333;
+  z-index: 200;
+}
+.dropdown-menu::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -10px;
+  width: 0;
+  height: 0;
+  border-bottom: 10px solid #e54;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
+.dropdown-menu li a:hover {
+  color: #fff;
+}
+>>>>>>> a761608ed217dd6118fbd98ac94fdfb7ba0e6eae
