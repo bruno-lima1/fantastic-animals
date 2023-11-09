@@ -1,33 +1,33 @@
 .dropdown-menu {
   display: none;
-  background: #e54;
   position: absolute;
-  border: 2px solid rgb(0, 0, 0);
+  background: #e54;
+  border: 2px solid #333;
 }
-.dropdown-menu li a:hover {
+.header-menu-sobre:hover .dropdown-menu,
+.header-menu-sobre.active .dropdown-menu {
+  display: block;
+  animation: anime-bottom 0.5s forwards;
+}
+.dropdown-menu a:hover {
   color: #fff;
 }
 .dropdown-menu::before {
   content: "";
-  top: -12px;
-  left: 10px;
+  border-bottom: 10px solid #e54;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
   position: absolute;
-  border-bottom: 12px solid #e54;
-  border-right: 12px solid transparent;
-  border-left: 12px solid transparent
+  left: 5px;
+  top: -10px;
 }
-[data-dropdown]:hover .dropdown-menu,
-[data-dropdown].active .dropdown-menu {
-  display: block;
-  animation: animationUp .5s forwards;
-}
-@keyframes animationUp {
+@keyframes anime-bottom {
   from {
     opacity: 0;
-    transform: translate3d(0, 20px, 0)
+    transform: translate3d(0, 50px, 0);
   }
   to {
     opacity: 1;
-    transform: translate3d(0, 0, 0)
+    transform: translate3d(0, 0, 0);
   }
 }
