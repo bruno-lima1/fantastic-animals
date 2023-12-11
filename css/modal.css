@@ -71,6 +71,14 @@
     transform: translate3d(0, 0, 0);
   }
 }
+@media (max-width: 800px) {
+  .modal-enter:hover {
+    background: #e54;
+  }
+  .modal-enter.active {
+    background: rgb(168, 60, 48);
+  }
+}
 @media (max-width: 700px) {
   .modal {
     max-width: 350px;
