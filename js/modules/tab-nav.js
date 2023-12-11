@@ -4,8 +4,7 @@ export default function initTabNav() {
   if (menu.length && content.length) {
     content[0].classList.add("active");
     menu.forEach((images, index) => {
-      ["touchstart", "click"].forEach((userEvent) => {
-        images.addEventListener(userEvent, () => {
+        images.addEventListener("click", () => {
           activeContent(index);
         });
       });
