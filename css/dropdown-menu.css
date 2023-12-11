@@ -3,11 +3,15 @@
   background: #e54;
   border: 2px solid #333;
   display: none;
+  z-index: 1;
 }
 [data-dropdown-menu]:hover .dropdown-menu, 
 [data-dropdown-menu].active .dropdown-menu {
   display: block;
   animation: animeBottom .5s forwards;
+}
+.dropdown-menu a {
+  transition: .2s;
 }
 .dropdown-menu a:hover {
   color: #fff;
@@ -29,5 +33,13 @@
   to {
     opacity: 1;
     transform: translate3d(0, 0, 0)
+  }
+}
+@media (max-width: 800px) {
+  .dropdown-menu a:hover {
+    color: #000;
+  }
+  .dropdown-menu a:active {
+    color: #fff;
   }
 }
