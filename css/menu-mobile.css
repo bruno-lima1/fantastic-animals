@@ -1,0 +1,59 @@
+[data-menu-mobile] {
+  display: none;
+}
+@media (max-width: 800px) {
+  .js [data-menu-mobile] {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    background: #000;
+    cursor: pointer;
+    border: none;
+    margin: 1rem 0.5rem;
+    border-radius: 4px;
+    padding: 0.5rem;
+    gap: 0.5rem;
+    font-family: "Rubik", sans-serif;
+    font-weight: 100;
+    position: relative;
+    z-index: 1;
+  }
+  .js [data-menu-mobile]::before {
+    content: "";
+    background: url(../img/icons8-cardápio.svg);
+    background-size: cover;
+    width: 17px;
+    height: 17px;
+    transition: 0.5s;
+  }
+  .js [data-menu-list] {
+    display: none;
+    position: absolute;
+    background: #fb5;
+    padding: 4.5rem 0 0 0;
+    width: 180px;
+    top: 0;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  }
+  .js [data-menu-mobile].active::before {
+    transform: rotate(90deg);
+  }
+  .js [data-menu-list].active {
+    display: block;
+    animation: menuMobile 0.5s forwards;
+  }
+  @keyframes menuMobile {
+    from {
+      opacity: 0;
+      transform: translate3d(-50px, 0, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  .js .dropdown-menu {
+    position: relative;
+    border: none;
+  }
+}

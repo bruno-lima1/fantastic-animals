@@ -15,7 +15,8 @@
   <div data-grid-container class="grid-container">
     <header class="header">
       <nav>
-        <ul class="header-menu" data-smooth-scroll>
+        <button data-menu-mobile aria-expanded="false" aria-controls="menu">MENU</button>
+        <ul class="header-menu" data-smooth-scroll data-menu-list id="menu">
           <li><a href="#animais">ANIMAIS</a></li>
           <li data-dropdown-menu>
             <a href="./">SOBRE</a>
@@ -32,7 +33,7 @@
         </ul>
       </nav>
     </header>
- 
+
     <article id="animais" class="introducao">
       <h1 class="titulo">Animais Fantásticos</h1>
       <ul class="introducao-imagens" data-tab="menu">
@@ -168,4 +169,4 @@
   <script type="module" src="./js/script.js"></script>
 </body>
 
-</html>
+</html
