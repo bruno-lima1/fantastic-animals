@@ -1,21 +1,19 @@
 export default function initModal() {
+  const container = document.querySelector("[data-modal-container]");
   const open = document.querySelector("[data-modal-open]");
   const close = document.querySelector("[data-modal-close]");
-  const container = document.querySelector("[data-modal-container]");
-  if (open && close && container) {
-    ["touchstart", "click"].forEach((userEvent) => {
-      open.addEventListener(userEvent, handleModal);
-      close.addEventListener(userEvent, handleModal);
-      container.addEventListener(userEvent, outsideClick);
-    });
+  if (container && open && close) {
+    open.addEventListener("click", handleModal);
+    close.addEventListener("click", handleModal);
+    container.addEventListener("click", hideModal);
     function handleModal(event) {
       event.preventDefault();
       container.classList.toggle("active");
     }
-    function outsideClick(event) {
-      if (event.target === this) {
-        container.classList.remove("active");
-      }
+    function hideModal(event) {
+      return event.target === this
+        ? container.classList.remove("active")
+        : undefined;
     }
   }
 }

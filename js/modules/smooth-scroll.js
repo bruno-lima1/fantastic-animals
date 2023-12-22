@@ -3,19 +3,17 @@ export default function initSmoothScroll() {
     "[data-smooth-scroll] a[href^='#']"
   );
   if (internalLinks.length) {
-    internalLinks.forEach((links) => {
-      ["touchstart", "click"].forEach((userEvent) => {
-        links.addEventListener(userEvent, activeSmoothScroll);
-      });
+    internalLinks.forEach((link) => {
+      link.addEventListener("click", handleClick);
+      function handleClick(event) {
+        event.preventDefault();
+        const href = link.getAttribute("href");
+        const section = document.querySelector(href);
+        section.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
     });
-    function activeSmoothScroll(event) {
-      event.preventDefault();
-      const href = event.currentTarget.getAttribute("href");
-      const section = document.querySelector(href);
-      section.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
   }
 }

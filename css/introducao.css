@@ -46,7 +46,7 @@
 .introducao-descricao li {
   display: none;
 }
-[data-tab="content"] li.active {
+[data-tab-content] li.active {
   display: block;
   animation: tabNav .5s forwards;
 }

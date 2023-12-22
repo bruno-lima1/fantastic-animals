@@ -1,17 +1,17 @@
 export default function initAccordionNav() {
-  const questions = document.querySelectorAll("[data-accordion-nav] button");
+  const askings = document.querySelectorAll("[data-accordion-nav] button");
   const responses = document.querySelectorAll("[data-accordion-nav] dd");
-  if (responses.length && questions.length) {
+  if (askings.length) {
     responses[0].classList.add("active");
-    questions.forEach((question) => {
-      question.addEventListener("click", activeResponse);
+    askings.forEach((asks) => {
+      asks.addEventListener("click", handleClick);
+      function handleClick() {
+        const controls = asks.getAttribute("aria-controls");
+        const response = document.getElementById(controls);
+        response.classList.toggle("active");
+        const active = response.classList.contains("active");
+        asks.setAttribute("aria-expanded", active)
+      }
     });
-    function activeResponse(event) {
-      const controls = event.currentTarget.getAttribute("aria-controls");
-      const response = document.getElementById(controls);
-      response.classList.toggle("active");
-      const active = response.classList.contains("active");
-      event.currentTarget.setAttribute("aria-expanded", active);
-    }
   }
 }
