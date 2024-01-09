@@ -1,13 +1,11 @@
 export default function initSmoothScroll() {
-  const internalLinks = document.querySelectorAll(
-    "[data-smooth-scroll] a[href^='#']"
-  );
-  if (internalLinks.length) {
-    internalLinks.forEach((link) => {
+  const links = document.querySelectorAll("[data-smooth-scroll] a[href^='#']");
+  if (links.length) {
+    links.forEach((link) => {
       link.addEventListener("click", handleClick);
       function handleClick(event) {
         event.preventDefault();
-        const href = link.getAttribute("href");
+        const href = event.target.getAttribute("href");
         const section = document.querySelector(href);
         section.scrollIntoView({
           behavior: "smooth",
