@@ -7,7 +7,7 @@ export default function initDropdownMenu() {
     function handleClick(event) {
       event.preventDefault();
       menu.classList.toggle("active");
-      initOutsideClick(menu, "click", () => {
+      initOutsideClick(menu, () => {
       menu.classList.remove("active");
       })
     }
