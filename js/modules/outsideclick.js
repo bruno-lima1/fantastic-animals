@@ -2,12 +2,12 @@ export default function initOutsideClick(element, callback) {
   const html = document.documentElement;
   const outside = "data-outside";
   if (!element.hasAttribute(outside)) {
-    setTimeout(() => html.addEventListener("click", handleClick));
+    setTimeout(() => html.addEventListener("click", hideMenu));
     element.setAttribute(outside, "");
   }
-  function handleClick(event) {
+  function hideMenu(event) {
     if (!element.contains(event.target)) {
-      html.removeEventListener("click", handleClick);
+      html.removeEventListener("click", hideMenu);
       element.removeAttribute(outside);
       callback();
     }
