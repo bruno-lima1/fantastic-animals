@@ -16,7 +16,7 @@
     font-family: "Rubik", sans-serif;
     font-weight: 100;
     position: relative;
-    z-index: 1;
+    z-index: 2;
   }
   .js [data-menu-mobile]::before {
     content: "";
@@ -30,10 +30,12 @@
     display: none;
     position: absolute;
     background: #fb5;
-    padding: 4.5rem 0 0 0;
-    width: 180px;
+    padding: 4.5rem 0 1rem 0;
+    width: 300px;
     top: 0;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    border-radius: 0 7px 7px 0;
   }
   .js [data-menu-mobile].active::before {
     transform: rotate(90deg);
