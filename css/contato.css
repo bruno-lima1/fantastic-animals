@@ -14,7 +14,7 @@
 .contato ul {
   grid-area: 2/3;
 }
-.contato ul span {
+.contato ul .bitcoin {
   background: #2fff00;
   border-radius: 4px;
   padding: 0 0.25rem;
@@ -43,6 +43,17 @@
   background: #f33;
   border-radius: 50%;
   margin: 0 0 2px 5px;
+}
+.time-open,
+.time-close {
+  padding-left: .25rem;
+}
+[data-days].active .time-close,
+[data-days] .time-open {
+  display: none;
+}
+[data-days].active .time-open {
+  display: flex;
 }
 @media (max-width: 800px) {
   .contato {
