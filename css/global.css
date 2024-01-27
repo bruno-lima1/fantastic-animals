@@ -102,7 +102,7 @@ dd {
     background: #000;
   }
   .faq button::after {
-    background: url(../img/icons8-expand-arrow-32-dark.png);
+    background: url(../img/icons8-seta-para-expandir-100\ \(1\).png);
   }
   .modal {
     background: #555;
