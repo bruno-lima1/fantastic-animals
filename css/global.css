@@ -135,6 +135,7 @@ dd {
   .js [data-menu-mobile] {
     color: #fff;
     background: #000;
+    font-weight: 100;
   }
   .js [data-menu-mobile]::before {
     background: url(../img/icons8-cardápio.svg);
