@@ -92,6 +92,13 @@ dd {
   [data-days].open::after {
     border: 2px solid #000;
   }
+  .js [data-menu-mobile] {
+    color: #000;
+    background: #fff;
+  }
+  .js [data-menu-mobile]::before {
+    background: url(../img/icons8-cardápio-light.svg);
+  }
 }
 @media (prefers-color-scheme: dark) {
   body {
@@ -102,7 +109,7 @@ dd {
     background: #000;
   }
   .faq button::after {
-    background: url(../img/icons8-seta-para-expandir-100\ \(1\).png);
+    background: url(../img/icons8-seta-para-expandir-100\\(1\).png);
   }
   .modal {
     background: #555;
@@ -124,5 +131,12 @@ dd {
   }
   [data-days].open::after {
     border: 2px solid #ffffff;
+  }
+  .js [data-menu-mobile] {
+    color: #fff;
+    background: #000;
+  }
+  .js [data-menu-mobile]::before {
+    background: url(../img/icons8-cardápio.svg);
   }
 }
