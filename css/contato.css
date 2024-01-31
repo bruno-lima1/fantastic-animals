@@ -46,7 +46,7 @@
 }
 .time-open,
 .time-close {
-  padding-left: .25rem;
+  padding-left: 0.25rem;
 }
 [data-days].active .time-close,
 [data-days] .time-open {
