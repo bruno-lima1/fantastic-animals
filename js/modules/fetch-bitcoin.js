@@ -1,7 +1,7 @@
 export default function initFetchBitcoin() {
   const bitcoinValue = document.querySelector("[data-bitcoin]");
   if (bitcoinValue) {
-    async function bitcoinApi() {
+    async function showBitcoinValue() {
       try {
         const response = await fetch("https://blockchain.info/ticker");
         const data = await response.json();
@@ -10,6 +10,6 @@ export default function initFetchBitcoin() {
         console.log(erro);
       }
     }
-    bitcoinApi();
+    showBitcoinValue();
   }
 }
