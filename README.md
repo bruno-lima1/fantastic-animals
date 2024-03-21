@@ -2,7 +2,7 @@
 
 ## Sobre o projeto
 
-Este repositório contém um projeto criado como parte do curso de javascript da origamid.
+Esse repositório contém um projeto criado como parte do curso de javascript da origamid.
 
 ## Layout mobile
 <img src="https://github.com/brunocesar2/animais-fantasticos/assets/111947999/d52fe7e6-75e3-4c8f-ad73-a68db73bb81e" width="270px">
