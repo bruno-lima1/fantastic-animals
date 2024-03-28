@@ -1,16 +1,16 @@
 export default function initNumberAnimation() {
   const numberAnimation = () => {
-    const numbersList = document.querySelectorAll(".numeros span");
-    numbersList.forEach((number) => {
-      const numbers = +number.innerText;
+    const numbers = document.querySelectorAll(".numeros span");
+    numbers.forEach((number) => {
+      const numberValues = +number.innerText;
       let start = 0;
-      const increment = Math.floor(numbers / 100);
+      const increment = Math.floor(numberValues / 100);
       const timer = setInterval(() => {
         start += increment;
         number.innerText = start;
-        if (start >= numbers) {
+        if (start >= numberValues) {
           clearInterval(timer);
-          number.innerText = numbers;
+          number.innerText = numberValues;
         }
       }, 50 * Math.random());
     });
