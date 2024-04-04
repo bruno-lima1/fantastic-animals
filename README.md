@@ -1,8 +1,8 @@
-# Animais Fantásticos 
+# fantastic animals 
 
 ## Sobre o projeto
 
-Esse repositório contém um projeto criado como parte do curso de javascript da origamid.
+Esse é um site onde contém algumas funcionalidades de javascript em cada seção
 
 ## Layout mobile
 <img src="https://github.com/brunocesar2/animais-fantasticos/assets/111947999/d52fe7e6-75e3-4c8f-ad73-a68db73bb81e" width="270px">
