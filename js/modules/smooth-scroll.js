@@ -1,28 +1,15 @@
-export default class SmoothScroll {
-  constructor(links, options) {
-    this.internalLinks = document.querySelectorAll(links);
-    if (options === undefined) {
-      this.options = { behavior: "smooth", block: "start" };
-    } else {
-      this.options = options;
-    }
-    this.activeScroll = this.activeScroll.bind(this);
-  }
-  activeScroll(event) {
+export default function initSmoothScroll() {
+  const internalLinks = document.querySelectorAll("[data-smooth-scroll] a[href^='#']");
+  const activeScroll = (event) => {
     event.preventDefault();
-    const href = event.target.getAttribute("href");
+    const href = event.currentTarget.getAttribute("href");
     const section = document.querySelector(href);
-    section.scrollIntoView(this.options);
+    section.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    })
   }
-  addLinkEvent() {
-    this.internalLinks.forEach((link) => {
-      link.addEventListener("click", this.activeScroll);
-    });
-  }
-  init() {
-    if (this.internalLinks.length) {
-      this.addLinkEvent();
-    }
-    return this;
-  }
+  internalLinks.forEach((link) => {
+    link.addEventListener("click", activeScroll)
+  })
 }
