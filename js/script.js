@@ -12,7 +12,7 @@ import initNumberAnimation from "./modules/number-animation.js";
 
 
 initSmoothScroll()
-initTabNav();
+initTabNav()
 initAccordionNav();
 initScrollAnimation();
 initModal();
@@ -21,3 +21,23 @@ initTimeOperation();
 initMenuMobile();
 initFetchBitcoin();
 initNumberAnimation();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import TabNav from "./modules/tab-nav.js";
+
+// const tabNav = new TabNav("[data-tab-menu] img", "[data-tab-content] li")
+// tabNav.init()
