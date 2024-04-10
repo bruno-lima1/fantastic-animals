@@ -8,6 +8,7 @@ import initDropdownMenu from "./modules/dropdown-menu.js";
 import initTimeOperation from "./modules/time-operation.js";
 import initMenuMobile from "./modules/menu-mobile.js";
 import initFetchBitcoin from "./modules/fetch-bitcoin.js";
+import initAnimalsApi from "./modules/animals-api.js";
 
 
 
@@ -21,7 +22,7 @@ initDropdownMenu();
 initTimeOperation();
 initMenuMobile();
 initFetchBitcoin();
-
+initAnimalsApi()
 
 
 
