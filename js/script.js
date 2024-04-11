@@ -45,5 +45,3 @@ initAnimalsApi()
 // import Modal from "./modules/modal.js";
 // const modal = new Modal("[data-modal-open]", "[data-modal-close]", "[data-modal-container]", "active");
 // modal.init()
-
-
