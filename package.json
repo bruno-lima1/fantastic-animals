@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --mode production ./js/script.js -o ./main.js",
-    "dev": "webpack --mode development --watch ./js/script.js -o ./main.js"
-  },
+    "build": "webpack --mode production ./js/script.js -o ./public/main.js",
+    "dev": "webpack --mode development --watch ./js/script.js -o ./public/main.js"
+  },  
   "license": "ISC",
   "devDependencies": {
     "eslint": "^8.57.0",
