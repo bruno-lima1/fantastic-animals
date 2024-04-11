@@ -46,6 +46,4 @@ initAnimalsApi()
 // const modal = new Modal("[data-modal-open]", "[data-modal-close]", "[data-modal-container]", "active");
 // modal.init()
 
-import NumberAnimation from "./modules/number-animation.js";
-const numberAnimation = new NumberAnimation(".numeros span", ".numeros", "active")
-numberAnimation.init()
+
