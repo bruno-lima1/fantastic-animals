@@ -13,3 +13,4 @@ export default function initSmoothScroll() {
     link.addEventListener("click", activeScroll)
   })
 }
+
