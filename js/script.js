@@ -1,5 +1,5 @@
 import initModal from "./modules/modal.js";
-// import initNumberAnimation from "./modules/number-animation.js";
+import initNumberAnimation from "./modules/number-animation.js";
 import initAccordionNav from "./modules/accordion-nav.js";
 import initScrollAnimation from "./modules/scroll-animation.js";
 import initDropdownMenu from "./modules/dropdown-menu.js";
@@ -16,7 +16,7 @@ const tabNav = new TabNav("[data-tab-menu] img", "[data-tab-content] li", "activ
 tabNav.init()
 
 initModal();
-// initNumberAnimation();
+initNumberAnimation();
 initAccordionNav();
 initScrollAnimation();
 initDropdownMenu();
