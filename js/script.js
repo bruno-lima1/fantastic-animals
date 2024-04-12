@@ -1,4 +1,5 @@
-import initSmoothScroll from "./modules/smooth-scroll.js";
+// import initSmoothScroll from "./modules/smooth-scroll.js";
+import SmoothScroll from "./modules/smooth-scroll.js";
 import initTabNav from "./modules/tab-nav.js";
 import initModal from "./modules/modal.js";
 // import initNumberAnimation from "./modules/number-animation.js";
@@ -10,9 +11,10 @@ import initMenuMobile from "./modules/menu-mobile.js";
 import initFetchBitcoin from "./modules/fetch-bitcoin.js";
 import initAnimalsApi from "./modules/animals-api.js";
 
+const smoothScroll = new SmoothScroll("[data-smooth-scroll] a[href^='#']");
+smoothScroll.init()
 
-
-initSmoothScroll()
+// initSmoothScroll()
 initTabNav()
 initModal();
 // initNumberAnimation();
