@@ -1,5 +1,3 @@
-import NumberAnimation from "./number-animation.js";
-
 export default function initAnimalsApi() {
   const animalsApi = async (url) => {
     try {
@@ -8,8 +6,6 @@ export default function initAnimalsApi() {
       data.forEach((values) => {
         changeTags(values);
       });
-      const numberAnimation = new NumberAnimation(".numeros span",".numeros","active");
-      numberAnimation.init();
     } catch (erro) {
       console.log(erro);
     }
@@ -22,3 +18,30 @@ export default function initAnimalsApi() {
     numberSection.appendChild(div);
   };
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import NumberAnimation from "./number-animation.js";
+// const numberAnimation = new NumberAnimation(".numeros span",".numeros","active");
+// numberAnimation.init();
