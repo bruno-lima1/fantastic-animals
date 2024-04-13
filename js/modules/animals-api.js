@@ -1,3 +1,5 @@
+import initNumberAnimation from "./number-animation.js";
+
 export default function initAnimalsApi() {
   const animalsApi = async (url) => {
     try {
@@ -6,6 +8,7 @@ export default function initAnimalsApi() {
       data.forEach((values) => {
         changeTags(values);
       });
+      initNumberAnimation();
     } catch (erro) {
       console.log(erro);
     }

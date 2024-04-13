@@ -17,6 +17,7 @@ export default function initNumberAnimation() {
   };
   const handleNumberAnimation = (mutation) => {
     if (mutation[0].target.classList.contains("active")) {
+      observer.disconnect()
       numberAnimation();
     }
   };
