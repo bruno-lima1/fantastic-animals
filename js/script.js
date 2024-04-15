@@ -23,3 +23,24 @@ initDropdownMenu();
 initTimeOperation();
 initMenuMobile();
 initFetchBitcoin();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import animalsApi from "./modules/animals-api.js";
+// animalsApi("./animals-api.json", "[data-number]")
