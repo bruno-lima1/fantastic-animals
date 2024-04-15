@@ -48,31 +48,31 @@ export default function initAnimalsApi() {
 
 // import initNumberAnimation from "./number-animation.js";
 
-// export default function animalsApi(url, target) {
-//   const numberSection = document.querySelector(target);
+// export default function animalsApi(url, section) {
+//   const numberSection = document.querySelector(section);
 //   const createAnimals = async () => {
 //     try {
 //       const response = await fetch(url);
 //       const data = await response.json();
 //       data.forEach((values) => {
-//         fill(values)
+//         insertContent(values);
 //       });
 //       numberAnimation()
 //     } catch (erro) {
 //       console.log(erro);
 //     }
 //   };
-//   const fill = (values) => {
-//     const animalSection = createTags(values)
-//     numberSection.appendChild(animalSection);
-//   }
 //   const numberAnimation = () => {
 //     initNumberAnimation();
+//   } 
+//   const insertContent = (values) => {
+//     const content = createTags(values);
+//     numberSection.appendChild(content)
 //   }
 //   const createTags = (values) => {
 //     const div = document.createElement("div");
 //     div.innerHTML = `<h3>${values.specie}</h3><span>${values.total}</span>`;
 //     return div;
 //   };
-//   return createAnimals()
+//   return createAnimals();
 // }
