@@ -1,4 +1,4 @@
-export default function bitcoinApi(urls, target) {
+export default function bitcoinApi(url, target) {
   const bitcoinValue = document.querySelector(target);
   if (bitcoinValue) {
     async function showBitcoinValue() {
