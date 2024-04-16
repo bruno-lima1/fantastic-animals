@@ -1,10 +1,10 @@
 import initAnimalsApi from "./modules/animals-api.js";
+import bitcoinApi from "./modules/bitcoin-api.js";
 import initAccordionNav from "./modules/accordion-nav.js";
 import initScrollAnimation from "./modules/scroll-animation.js";
 import initDropdownMenu from "./modules/dropdown-menu.js";
 import initTimeOperation from "./modules/time-operation.js";
 import initMenuMobile from "./modules/menu-mobile.js";
-import initFetchBitcoin from "./modules/fetch-bitcoin.js";
 
 import SmoothScroll from "./modules/smooth-scroll.js";
 const smoothScroll = new SmoothScroll("[data-smooth-scroll] a[href^='#']");
@@ -17,12 +17,12 @@ const modal = new Modal("[data-modal-open]", "[data-modal-close]", "[data-modal-
 modal.init()
 
 initAnimalsApi()
+bitcoinApi("https://blockchain.info/ticker", "[data-bitcoin]");
 initAccordionNav();
 initScrollAnimation();
 initDropdownMenu();
 initTimeOperation();
 initMenuMobile();
-initFetchBitcoin();
 
 
 
