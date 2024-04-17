@@ -5,6 +5,7 @@ import initAccordionNav from "./modules/accordion-nav.js";
 import initDropdownMenu from "./modules/dropdown-menu.js";
 import initTimeOperation from "./modules/time-operation.js";
 import initMenuMobile from "./modules/menu-mobile.js";
+import initMenuMobile from "./modules/menu-mobile.js";
 
 import SmoothScroll from "./modules/smooth-scroll.js";
 const smoothScroll = new SmoothScroll("[data-smooth-scroll] a[href^='#']");

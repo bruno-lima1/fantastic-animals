@@ -42,12 +42,14 @@ export default function initScrollAnimation() {
 
 
 
+// import debounce from "./modules/debounce.js";
+
 // export default class scrollAnimation {
 //   constructor(sections, active) {
 //     this.sections = document.querySelectorAll(sections)
 //     this.screenHalf = window.innerHeight * 0.6;
 //     this.active = active;
-//     this.checkDistance = this.checkDistance.bind(this)
+//     this.checkDistance = debounce(this.checkDistance.bind(this), 200)
 //   }
 //   getDistance() {
 //     this.distance = [...this.sections].map((section) => {
