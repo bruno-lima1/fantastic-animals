@@ -1,8 +1,10 @@
 export default class TabNav {
-  constructor(image, contents, active) {
+  constructor(image, contents, active, event) {
     this.images = document.querySelectorAll(image);
     this.contents = document.querySelectorAll(contents);
     this.active = active;
+    if (this.event === undefined) this.event = "click"
+    else this.event = event;
   }
   showContent(index) {
     this.contents.forEach((content) => {
@@ -12,7 +14,7 @@ export default class TabNav {
   }
   addEvent() {
     this.images.forEach((image, index) => {
-      image.addEventListener("click", () => {
+      image.addEventListener(this.event, () => {
         this.showContent(index);
       });
     });
