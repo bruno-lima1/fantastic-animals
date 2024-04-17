@@ -2,7 +2,7 @@ import bitcoinApi from "./modules/bitcoin-api.js";
 import initAnimalsApi from "./modules/animals-api.js";
 import initScrollAnimation from "./modules/scroll-animation.js";
 import initAccordionNav from "./modules/accordion-nav.js";
-// import initDropdownMenu from "./modules/dropdown-menu.js";
+import initDropdownMenu from "./modules/dropdown-menu.js";
 import initTimeOperation from "./modules/time-operation.js";
 import initMenuMobile from "./modules/menu-mobile.js";
 
@@ -15,15 +15,12 @@ tabNav.init()
 import Modal from "./modules/modal.js";
 const modal = new Modal("[data-modal-open]", "[data-modal-close]", "[data-modal-container]", "active");
 modal.init()
-import DropdownMenu from "./modules/dropdown-menu.js";
-const dropdownMenu = new DropdownMenu("[data-dropdown-menu]", "active")
-dropdownMenu.init()
 
 bitcoinApi("https://blockchain.info/ticker", "[data-bitcoin]");
 initAnimalsApi()
 initScrollAnimation();
 initAccordionNav();
-// initDropdownMenu();
+initDropdownMenu();
 initTimeOperation();
 initMenuMobile();
 
@@ -44,9 +41,12 @@ initMenuMobile();
 
 
 
-
 // import animalsApi from "./modules/animals-api.js";
 // animalsApi("./animals-api.json", "[data-number]")
+
+// import DropdownMenu from "./modules/dropdown-menu.js";
+// const dropdownMenu = new DropdownMenu("[data-dropdown-menu]", "active")
+// dropdownMenu.init()
 
 // import ScrollAnimation from "./modules/scroll-animation.js";
 // const scrollAnimation = new ScrollAnimation("[data-scroll-animation]", "active");
