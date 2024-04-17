@@ -41,9 +41,12 @@ initMenuMobile();
 
 
 
-
 // import animalsApi from "./modules/animals-api.js";
 // animalsApi("./animals-api.json", "[data-number]")
+
+// import DropdownMenu from "./modules/dropdown-menu.js";
+// const dropdownMenu = new DropdownMenu("[data-dropdown-menu]", "active")
+// dropdownMenu.init()
 
 // import ScrollAnimation from "./modules/scroll-animation.js";
 // const scrollAnimation = new ScrollAnimation("[data-scroll-animation]", "active");
