@@ -1,11 +1,10 @@
 export default class SmoothScroll {
-  constructor(links, options) {
+  constructor(links, options, event) {
     this.links = document.querySelectorAll(links);
-    if (options === undefined) {
-      this.options = { behavior: "smooth", block: "start" };
-    } else {
-      this.options = options;
-    }
+    if (options === undefined) this.options = { behavior: "smooth", block: "start" };
+    else this.options = options
+    if (event === undefined) this.event = "click"
+    else this.event = event;
     this.eventActiveScroll = this.eventActiveScroll.bind(this);
   }
   activeScroll(event) {
@@ -19,7 +18,7 @@ export default class SmoothScroll {
   }
   addEvent() {
     this.links.forEach((link) => {
-      link.addEventListener("click", this.eventActiveScroll);
+      link.addEventListener(this.event, this.eventActiveScroll);
     });
   }
   init() {
