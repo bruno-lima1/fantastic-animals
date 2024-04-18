@@ -9,25 +9,25 @@ export default class Modal {
     if (this.event === undefined) this.event = "click";
     else this.event = event;
   }
-  clickOutsideModal(event) {
-    return event.target === this.container ? this.toggleModal() : undefined;
-  }
-  toggleModal() {
-    this.container.classList.toggle(this.active)
-  }
-  eventToggleModal(event) {
-    event.preventDefault();
-    this.toggleModal()
+  init() {
+    if (this.open && this.close && this.container) {
+      this.addEvent()
+    }
+    return this;
   }
   addEvent() {
     this.open.addEventListener(this.event, this.eventToggleModal)
     this.close.addEventListener(this.event, this.eventToggleModal)
     this.container.addEventListener(this.event, this.clickOutsideModal)
   }
-  init() {
-    if (this.open && this.close && this.container) {
-      this.addEvent()
-    }
-    return this;
+  eventToggleModal(event) {
+    event.preventDefault();
+    this.toggleModal()
+  }
+  toggleModal() {
+    this.container.classList.toggle(this.active)
+  }
+  clickOutsideModal(event) {
+    return event.target === this.container ? this.toggleModal() : undefined;
   }
 }
