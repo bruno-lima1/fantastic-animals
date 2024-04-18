@@ -6,11 +6,12 @@ export default class TabNav {
     if (this.event === undefined) this.event = "click"
     else this.event = event;
   }
-  showContent(index) {
-    this.contents.forEach((content) => {
-      content.classList.remove(this.active);
-    });
-    this.contents[index].classList.add(this.active);
+  init() {
+    if (this.images.length && this.contents.length) {
+      this.showContent(0);
+      this.addEvent();
+    }
+    return this;
   }
   addEvent() {
     this.images.forEach((image, index) => {
@@ -19,11 +20,10 @@ export default class TabNav {
       });
     });
   }
-  init() {
-    if (this.images.length && this.contents.length) {
-      this.showContent(0);
-      this.addEvent();
-    }
-    return this;
+  showContent(index) {
+    this.contents.forEach((content) => {
+      content.classList.remove(this.active);
+    });
+    this.contents[index].classList.add(this.active);
   }
 }
