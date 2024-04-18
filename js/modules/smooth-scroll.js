@@ -7,24 +7,24 @@ export default class SmoothScroll {
     else this.event = event;
     this.eventActiveScroll = this.eventActiveScroll.bind(this);
   }
-  activeScroll(event) {
-    const href = event.currentTarget.getAttribute("href");
-    const section = document.querySelector(href);
-    section.scrollIntoView(this.options);
-  }
-  eventActiveScroll(event) {
-    event.preventDefault();
-    this.activeScroll(event);
+  init() {
+    if (this.links.length) {
+      this.addEvent();
+    }
+    return this;
   }
   addEvent() {
     this.links.forEach((link) => {
       link.addEventListener(this.event, this.eventActiveScroll);
     });
   }
-  init() {
-    if (this.links.length) {
-      this.addEvent();
-    }
-    return this;
+  eventActiveScroll(event) {
+    event.preventDefault();
+    this.activeScroll(event);
+  }
+  activeScroll(event) {
+    const href = event.currentTarget.getAttribute("href");
+    const section = document.querySelector(href);
+    section.scrollIntoView(this.options);
   }
 }
