@@ -47,16 +47,16 @@ export default function initDropdownMenu() {
 // export default class DropdownMenu {
 //   constructor(menu, active, event) {
 //     this.menu = document.querySelector(menu);
-//     this.eventToggleMenu = this.eventToggleMenu.bind(this);
-//     this.active = active;
 //     if (event === undefined) this.event = "click";
-//     else this.event = event
+//     else this.event = event;
+//     this.eventToggleMenu = this.eventToggleMenu.bind(this)
+//     this.active = active
 //   }
 //   toggleMenu() {
 //     this.menu.classList.toggle(this.active);
 //     initOutsideClick(this.menu, () => {
-//       this.menu.classList.remove(this.active);
-//     });
+//     this.menu.classList.remove(this.active);
+//     })
 //   }
 //   eventToggleMenu(event) {
 //     event.preventDefault();
@@ -67,7 +67,7 @@ export default function initDropdownMenu() {
 //   }
 //   init() {
 //     if (this.menu) {
-//       this.addEvent();
+//       this.addEvent()
 //     }
 //     return this;
 //   }

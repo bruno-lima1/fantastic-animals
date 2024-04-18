@@ -1,8 +1,8 @@
 import bitcoinApi from "./modules/bitcoin-api.js";
 import initAnimalsApi from "./modules/animals-api.js";
+import initDropdownMenu from "./modules/dropdown-menu.js";
 import initScrollAnimation from "./modules/scroll-animation.js";
 import initAccordionNav from "./modules/accordion-nav.js";
-import initDropdownMenu from "./modules/dropdown-menu.js";
 import initTimeOperation from "./modules/time-operation.js";
 import initMenuMobile from "./modules/menu-mobile.js";
 
@@ -18,11 +18,12 @@ modal.init()
 
 bitcoinApi("https://blockchain.info/ticker", "[data-bitcoin]");
 initAnimalsApi()
+initDropdownMenu();
 initScrollAnimation();
 initAccordionNav();
-initDropdownMenu();
 initTimeOperation();
 initMenuMobile();
+
 
 
 
