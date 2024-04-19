@@ -12,6 +12,7 @@
   gap: 0 0.5rem;
   padding-bottom: 1rem;
   font-weight: 700;
+  text-align: start;
 }
 @media (max-width: 800px) {
   .titulo {
