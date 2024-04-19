@@ -1,9 +1,9 @@
 export default class Modal {
-  constructor(open, close, container, active, event) {
+  constructor(open, close, container, event) {
     this.open = document.querySelector(open)
     this.close = document.querySelector(close)
     this.container = document.querySelector(container)
-    this.active = active
+    this.active = "active"
     this.eventToggleModal = this.eventToggleModal.bind(this)
     this.clickOutsideModal = this.clickOutsideModal.bind(this)
     if (this.event === undefined) this.event = "click";

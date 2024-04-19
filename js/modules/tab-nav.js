@@ -1,8 +1,8 @@
 export default class TabNav {
-  constructor(image, contents, active, event) {
+  constructor(image, contents, event) {
     this.images = document.querySelectorAll(image);
     this.contents = document.querySelectorAll(contents);
-    this.active = active;
+    this.active = "active";
     if (this.event === undefined) this.event = "click"
     else this.event = event;
   }
