@@ -1,40 +1,36 @@
-import bitcoinApi from "./modules/bitcoin-api.js";
-import initAnimalsApi from "./modules/animals-api.js";
-import initDropdownMenu from "./modules/dropdown-menu.js";
-import initTimeOperation from "./modules/time-operation.js";
-import initScrollAnimation from "./modules/scroll-animation.js";
-// import initAccordionNav from "./modules/accordion-nav.js";
+import TabNav from "./modules/tab-nav.js";
+const tabNav = new TabNav("[data-tab-menu] img", "[data-tab-content] li")
+tabNav.init()
+
+import AccordionNav from "./modules/accordion-nav.js";
+const accordionNav = new AccordionNav("[data-accordion-nav] button", "[data-accordion-nav] dd")
+accordionNav.init()
+
+import MenuMobile from "./modules/menu-mobile.js";
+const menuMobile = new MenuMobile("[data-menu-mobile]", "[data-menu-list]");
+menuMobile.init()
 
 import SmoothScroll from "./modules/smooth-scroll.js";
 const smoothScroll = new SmoothScroll("[data-smooth-scroll] a[href^='#']");
 smoothScroll.init()
-import TabNav from "./modules/tab-nav.js";
-const tabNav = new TabNav("[data-tab-menu] img", "[data-tab-content] li")
-tabNav.init()
+
 import Modal from "./modules/modal.js";
 const modal = new Modal("[data-modal-open]", "[data-modal-close]", "[data-modal-container]");
 modal.init()
-import MenuMobile from "./modules/menu-mobile.js";
-const menuMobile = new MenuMobile("[data-menu-mobile]", "[data-menu-list]");
-menuMobile.init()
-import AccordionNav from "./modules/accordion-nav.js";
-const accordionNav = new AccordionNav("[data-accordion-nav] button", "[data-accordion-nav] dd");
-accordionNav.init()
 
+import bitcoinApi from "./modules/bitcoin-api.js";
 bitcoinApi("https://blockchain.info/ticker", "[data-bitcoin]");
+
+
+
+import initAnimalsApi from "./modules/animals-api.js";
 initAnimalsApi()
+import initDropdownMenu from "./modules/dropdown-menu.js";
 initDropdownMenu();
+import initTimeOperation from "./modules/time-operation.js";
 initTimeOperation();
+import initScrollAnimation from "./modules/scroll-animation.js";
 initScrollAnimation();
-// initAccordionNav();
-
-
-
-
-
-
-
-
 
 
 
