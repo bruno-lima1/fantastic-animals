@@ -1,4 +1,4 @@
-import initNumberAnimation from "./number-animation.js";
+import NumberAnimation from "./number-animation.js";
 
 export default function initAnimalsApi() {
   const animalsApi = async (url) => {
@@ -8,7 +8,8 @@ export default function initAnimalsApi() {
       data.forEach((values) => {
         changeTags(values);
       });
-      initNumberAnimation();
+      const numberAnimation = new NumberAnimation(".numeros span", ".numeros")
+      numberAnimation.init()
     } catch (erro) {
       console.log(erro);
     }
@@ -39,14 +40,7 @@ export default function initAnimalsApi() {
 
 
 
-
-
-
 // import NumberAnimation from "./number-animation.js";
-// const numberAnimation = new NumberAnimation(".numeros span",".numeros","active");
-// numberAnimation.init();
-
-// import initNumberAnimation from "./number-animation.js";
 
 // export default function animalsApi(url, target) {
 //   const numberSection = document.querySelector(target);
@@ -63,7 +57,8 @@ export default function initAnimalsApi() {
 //     }
 //   };
 //   const numberAnimation = () => {
-//     initNumberAnimation()
+//     const numberAnimation = new NumberAnimation(".numeros span", ".numeros")
+//     numberAnimation.init()
 //   }
 //   const createTags = (values) => {
 //     const div = document.createElement("div");
