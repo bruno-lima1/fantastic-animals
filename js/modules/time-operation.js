@@ -43,36 +43,35 @@ export default function initTimeOperation() {
 
 
 // export default class TimeOperation {
-//   constructor(timeOperation, active) {
+//   constructor(timeOperation) {
 //     this.timeOperation = document.querySelector(timeOperation);
-//     this.active = active;
+//     this.active = "active"
 //   }
 //   init() {
 //     if (this.timeOperation) {
-//       this.operationData();
-//       this.currentData();
-//       this.activeOpen();
+//       this.operationOpen()
+//       this.currentTime()
+//       this.calculateOpen()
+//       this.enableOpen()
 //     }
 //     return this;
 //   }
-//   operationData() {
+//   operationOpen() {
 //     this.daysOpen = this.timeOperation.dataset.days.split(", ").map(Number);
 //     this.hoursOpen = this.timeOperation.dataset.hours.split(", ").map(Number);
 //   }
-//   currentData() {
+//   currentTime() {
 //     const currentDate = new Date();
 //     this.currentDay = currentDate.getDay();
 //     this.currentHour = currentDate.getUTCHours() - 3;
 //   }
-//   calculateTimeOperation() {
-//     const dayIsOpen = this.daysOpen.indexOf(this.currentDay) !== -1;
-//     const hourIsOpen =
-//       this.hoursOpen[0] <= this.currentHour &&
-//       this.hoursOpen[1] > this.currentHour;
-//     return dayIsOpen && hourIsOpen;
+//   calculateOpen() {
+//     this.dayIsOpen = this.daysOpen.indexOf(this.currentDay) !== -1;
+//     this.hourIsOpen = this.hoursOpen[0] <= this.currentHour && this.hoursOpen[1] > this.currentHour;
 //   }
-//   activeOpen() {
-//     if (this.calculateTimeOperation())
+//   enableOpen() {
+//     if (this.dayIsOpen && this.hourIsOpen) {
 //       this.timeOperation.classList.add(this.active);
+//     }
 //   }
 // }
