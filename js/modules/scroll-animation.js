@@ -5,8 +5,7 @@ export default function initScrollAnimation() {
     sections.forEach((section) => {
       window.addEventListener("scroll", showSections);
       function showSections() {
-        const sectionIsVisible =
-          section.getBoundingClientRect().top - screenHalf < 0;
+        const sectionIsVisible = section.getBoundingClientRect().top - screenHalf < 0;
         section.classList.toggle("active", sectionIsVisible);
       }
     });
