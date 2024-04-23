@@ -62,12 +62,12 @@ dd {
     background: #fff;
     color: #333;
   }
-  /* .faq button {
+  .faq button {
     background: #fff;
   }
   .faq button::after {
     background: url(../img/icons8-seta-para-expandir-96.png);
-  } */
+  }
   .faq dt {
     background: #fff;
   }
