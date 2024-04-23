@@ -21,10 +21,11 @@ modal.init()
 import bitcoinApi from "./modules/bitcoin-api.js";
 bitcoinApi("https://blockchain.info/ticker", "[data-bitcoin]");
 
+import animalsApi from "./modules/animals-api.js";
+animalsApi("./animals-api.json", "[data-number]")
 
 
-import initAnimalsApi from "./modules/animals-api.js";
-initAnimalsApi()
+
 import initDropdownMenu from "./modules/dropdown-menu.js";
 initDropdownMenu();
 import initTimeOperation from "./modules/time-operation.js";
@@ -40,10 +41,6 @@ initScrollAnimation();
 
 
 
-
-
-// import animalsApi from "./modules/animals-api.js";
-// animalsApi("./animals-api.json", "[data-number]")
 
 // import DropdownMenu from "./modules/dropdown-menu.js";
 // const dropdownMenu = new DropdownMenu("[data-dropdown-menu]", "active")
