@@ -22,7 +22,7 @@ export default class Modal {
   }
   eventToggleModal(event) {
     event.preventDefault();
-    this.toggleModal()
+    return this.toggleModal()
   }
   toggleModal() {
     this.container.classList.toggle(this.active)

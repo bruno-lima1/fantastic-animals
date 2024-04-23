@@ -20,7 +20,7 @@ export default class SmoothScroll {
   }
   eventActiveScroll(event) {
     event.preventDefault();
-    this.activeScroll(event);
+    return this.activeScroll(event);
   }
   activeScroll(event) {
     const href = event.currentTarget.getAttribute("href");

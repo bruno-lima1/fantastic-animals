@@ -18,12 +18,12 @@ export default class NumberAnimation {
   handleNumberAnimation(mutation) {
     if (mutation[0].target.classList.contains(this.active)) {
       this.observer.disconnect()
-      this.numbersIterate();
+      return this.numbersIterate();
     }
   };
   numbersIterate() {
     this.numbers.forEach((number) => {
-      this.constructor.activeNumberAnimation(number)
+      return this.constructor.activeNumberAnimation(number)
     });
   }
   static activeNumberAnimation(number) {

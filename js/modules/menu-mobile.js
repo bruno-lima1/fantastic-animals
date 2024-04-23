@@ -9,6 +9,15 @@ export default class MenuMobile {
     else this.event = event;
     this.openMenu = this.openMenu.bind(this)
   }
+  init() {
+    if (this.button && this.menu) {
+      this.addEvent()
+    }
+    return this;
+  }
+  addEvent() {
+    this.button.addEventListener(this.event, this.openMenu);
+  }
   openMenu() {
     this.button.classList.add(this.active);
     this.menu.classList.add(this.active);
@@ -16,14 +25,5 @@ export default class MenuMobile {
       this.button.classList.remove(this.active);
       this.menu.classList.remove(this.active);
     });
-  }
-  addEvent() {
-    this.button.addEventListener(this.event, this.openMenu);
-  }
-  init() {
-    if (this.button && this.menu) {
-      this.addEvent()
-    }
-    return this;
   }
 }
