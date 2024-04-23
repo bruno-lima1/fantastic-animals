@@ -22,6 +22,10 @@ import TimeOperation from "./modules/time-operation.js";
 const timeOperation = new TimeOperation("[data-days]")
 timeOperation.init()
 
+import DropdownMenu from "./modules/dropdown-menu.js";
+const dropdownMenu = new DropdownMenu("[data-dropdown-menu]");
+dropdownMenu.init()
+
 import bitcoinApi from "./modules/bitcoin-api.js";
 bitcoinApi("https://blockchain.info/ticker", "[data-bitcoin]");
 
@@ -30,8 +34,6 @@ animalsApi("./animals-api.json", "[data-number]")
 
 
 
-import initDropdownMenu from "./modules/dropdown-menu.js";
-initDropdownMenu();
 import initScrollAnimation from "./modules/scroll-animation.js";
 initScrollAnimation();
 
@@ -39,12 +41,6 @@ initScrollAnimation();
 
 
 
-
-
-
-// import DropdownMenu from "./modules/dropdown-menu.js";
-// const dropdownMenu = new DropdownMenu("[data-dropdown-menu]", "active")
-// dropdownMenu.init()
 
 // import ScrollAnimation from "./modules/scroll-animation.js";
 // const scrollAnimation = new ScrollAnimation("[data-scroll-animation]", "active");
