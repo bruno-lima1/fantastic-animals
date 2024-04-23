@@ -47,22 +47,22 @@ export default function initScrollAnimation() {
 // export default class scrollAnimation {
 //   constructor(sections) {
 //     this.sections = document.querySelectorAll(sections);
-//     this.active = "active";
-//     this.checkDistance = debounce(this.checkDistance.bind(this), 50);
+//     this.enableAnimation = debounce(this.enableAnimation.bind(this), 50);
 //     this.screenHalf = window.innerHeight * 0.6;
+//     this.active = "active";
 //   }
 //   init() {
 //     if (this.sections.length) {
 //       this.addEvent();
-//       this.getDistance();
-//       this.checkDistance();
+//       this.getOffsetTop();
+//       this.enableAnimation();
 //     }
 //     return this;
 //   }
 //   addEvent() {
-//     window.addEventListener("scroll", this.checkDistance);
+//     window.addEventListener("scroll", this.enableAnimation);
 //   }
-//   getDistance() {
+//   getOffsetTop() {
 //     this.distance = [...this.sections].map((section) => {
 //       const offset = section.offsetTop;
 //       return {
@@ -71,7 +71,7 @@ export default function initScrollAnimation() {
 //       };
 //     });
 //   }
-//   checkDistance() {
+//   enableAnimation() {
 //     this.distance.forEach((item) => {
 //       return window.scrollY > item.offset
 //         ? item.element.classList.add(this.active)
@@ -79,6 +79,6 @@ export default function initScrollAnimation() {
 //     });
 //   }
 //   stop() {
-//     window.removeEventListener("scroll", this.checkDistance);
+//     window.removeEventListener("scroll", this.enableanimation);
 //   }
 // }
