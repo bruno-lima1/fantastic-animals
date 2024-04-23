@@ -34,14 +34,17 @@ animalsApi("./animals-api.json", "[data-number]")
 
 
 
-import initScrollAnimation from "./modules/scroll-animation.js";
-initScrollAnimation();
+// import initScrollAnimation from "./modules/scroll-animation.js";
+// initScrollAnimation();
 
 
 
 
 
 
-// import ScrollAnimation from "./modules/scroll-animation.js";
-// const scrollAnimation = new ScrollAnimation("[data-scroll-animation]", "active");
-// scrollAnimation.init();
+
+
+
+import ScrollAnimation from "./modules/scroll-animation.js";
+const scrollAnimation = new ScrollAnimation("[data-scroll-animation]");
+scrollAnimation.init();
