@@ -1,16 +1,16 @@
-import initOutsideClick from "./outsideclick.js"
+import initOutsideClick from "./outsideclick.js";
 
 export default class DropdownMenu {
   constructor(menu, event) {
     this.menu = document.querySelector(menu);
-    this.active = "active"
+    this.active = "active";
     if (event === undefined) this.event = "click";
     else this.event === event;
-    this.eventToggleMenu = this.eventToggleMenu.bind(this)
+    this.eventToggleMenu = this.eventToggleMenu.bind(this);
   }
   init() {
     if (this.menu) {
-      this.addEvent()
+      this.addEvent();
     }
     return this;
   }
@@ -19,12 +19,12 @@ export default class DropdownMenu {
   }
   eventToggleMenu(event) {
     event.preventDefault();
-    return this.toggleMenu()
+    return this.toggleMenu();
   }
   toggleMenu() {
     this.menu.classList.toggle(this.active);
     initOutsideClick(this.menu, () => {
-    this.menu.classList.remove(this.active);
-    })
+      this.menu.classList.remove(this.active);
+    });
   }
 }

@@ -1,14 +1,14 @@
 export default class TimeOperation {
   constructor(timeOperation) {
     this.timeOperation = document.querySelector(timeOperation);
-    this.active = "active"
+    this.active = "active";
   }
   init() {
     if (this.timeOperation) {
       this.timeOpen();
-      this.currentTime()
+      this.currentTime();
       this.calculateTimeOperation();
-      this.enableVerification()
+      this.enableVerification();
     }
     return this;
   }
@@ -23,7 +23,9 @@ export default class TimeOperation {
   }
   calculateTimeOperation() {
     this.dayIsOpen = this.daysOpen.indexOf(this.currentDay) !== -1;
-    this.hourIsOpen = this.hoursOpen[0] <= this.currentHour && this.hoursOpen[1] > this.currentHour;
+    this.hourIsOpen =
+      this.hoursOpen[0] <= this.currentHour &&
+      this.hoursOpen[1] > this.currentHour;
   }
   enableVerification() {
     if (this.dayIsOpen && this.hourIsOpen) {

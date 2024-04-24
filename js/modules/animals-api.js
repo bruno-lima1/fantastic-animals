@@ -9,22 +9,22 @@ export default function animalsApi(url, section) {
       data.forEach((values) => {
         createTags(values);
       });
-      activeNumberAnimation()
+      activeNumberAnimation();
     } catch (erro) {
       console.log(erro);
     }
   };
   const activeNumberAnimation = () => {
-    const numberAnimation = new NumberAnimation(".numeros span", ".numeros")
-      numberAnimation.init()
-  }
+    const numberAnimation = new NumberAnimation(".numeros span", ".numeros");
+    numberAnimation.init();
+  };
   const createTags = (values) => {
     const div = document.createElement("div");
     div.innerHTML = `<h3>${values.specie}</h3><span>${values.total}</span>`;
-    return addContent(div)
+    return addContent(div);
   };
   const addContent = (div) => {
     numberSection.appendChild(div);
-  }
+  };
   return animalsApi();
 }

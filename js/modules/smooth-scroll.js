@@ -1,9 +1,10 @@
 export default class SmoothScroll {
   constructor(links, options, event) {
     this.links = document.querySelectorAll(links);
-    if (options === undefined) this.options = { behavior: "smooth", block: "start" };
-    else this.options = options
-    if (event === undefined) this.event = "click"
+    if (options === undefined)
+      this.options = { behavior: "smooth", block: "start" };
+    else this.options = options;
+    if (event === undefined) this.event = "click";
     else this.event = event;
     this.eventActiveScroll = this.eventActiveScroll.bind(this);
   }

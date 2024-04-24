@@ -3,7 +3,7 @@ export default class TabNav {
     this.images = document.querySelectorAll(image);
     this.contents = document.querySelectorAll(contents);
     this.active = "active";
-    if (this.event === undefined) this.event = "click"
+    if (this.event === undefined) this.event = "click";
     else this.event = event;
   }
   init() {

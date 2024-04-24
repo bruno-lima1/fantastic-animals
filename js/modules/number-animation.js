@@ -2,12 +2,12 @@ export default class NumberAnimation {
   constructor(numbers, observerTarget) {
     this.numbers = document.querySelectorAll(numbers);
     this.observerTarget = document.querySelector(observerTarget);
-    this.active = "active"
-    this.handleNumberAnimation = this.handleNumberAnimation.bind(this)
+    this.active = "active";
+    this.handleNumberAnimation = this.handleNumberAnimation.bind(this);
   }
   init() {
     if (this.numbers.length && this.observerTarget) {
-      this.createObserver()
+      this.createObserver();
     }
     return this;
   }
@@ -17,13 +17,13 @@ export default class NumberAnimation {
   }
   handleNumberAnimation(mutation) {
     if (mutation[0].target.classList.contains(this.active)) {
-      this.observer.disconnect()
+      this.observer.disconnect();
       return this.numbersIterate();
     }
-  };
+  }
   numbersIterate() {
     this.numbers.forEach((number) => {
-      return this.constructor.activeNumberAnimation(number)
+      return this.constructor.activeNumberAnimation(number);
     });
   }
   static activeNumberAnimation(number) {
@@ -38,5 +38,5 @@ export default class NumberAnimation {
         number.innerText = numberValues;
       }
     }, 50 * Math.random());
-  };
+  }
 }
