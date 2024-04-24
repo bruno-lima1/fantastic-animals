@@ -1,8 +1,8 @@
 import NumberAnimation from "./number-animation.js";
 
-export default function animalsApi(url, section) {
+export default function animalsData(url, section) {
   const numberSection = document.querySelector(section);
-  const animalsApi = async () => {
+  const animalsData = async () => {
     try {
       const response = await fetch(url);
       const data = await response.json();
@@ -26,5 +26,5 @@ export default function animalsApi(url, section) {
   const addContent = (div) => {
     numberSection.appendChild(div);
   };
-  return animalsApi();
+  return animalsData();
 }

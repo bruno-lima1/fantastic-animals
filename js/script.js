@@ -33,8 +33,8 @@ import TimeOperation from "./modules/time-operation.js";
 const timeOperation = new TimeOperation("[data-days]")
 timeOperation.init()
 
-import animalsApi from "./modules/animals-api.js";
-animalsApi("./animals-api.json", "[data-number]")
+import animalsData from "./modules/animals-data.js";
+animalsData("./animals-data.json", "[data-number]")
 
 import bitcoinApi from "./modules/bitcoin-api.js";
 bitcoinApi("https://blockchain.info/ticker", "[data-bitcoin]");
