@@ -5,7 +5,8 @@ export default function initScrollAnimation() {
     sections.forEach((section) => {
       window.addEventListener("scroll", showSections);
       function showSections() {
-        const sectionIsVisible = section.getBoundingClientRect().top - screenHalf < 0;
+        const sectionIsVisible =
+          section.getBoundingClientRect().top - screenHalf < 0;
         section.classList.toggle("active", sectionIsVisible);
       }
     });
@@ -41,44 +42,42 @@ export default function initScrollAnimation() {
 
 
 
-
 // import debounce from "./debounce.js";
 
-// export default class scrollAnimation {
+// export default class ScrollAnimation {
 //   constructor(sections) {
-//     this.sections = document.querySelectorAll(sections);
-//     this.enableAnimation = debounce(this.enableAnimation.bind(this), 50);
+//     this.sections = document.querySelectorAll(sections)
+//     this.getOffset = debounce(this.getOffset.bind(this), 50)
 //     this.screenHalf = window.innerHeight * 0.6;
 //     this.active = "active";
 //   }
 //   init() {
 //     if (this.sections.length) {
-//       this.addEvent();
-//       this.getOffsetTop();
-//       this.enableAnimation();
+//       this.addEvent()
 //     }
 //     return this;
 //   }
 //   addEvent() {
-//     window.addEventListener("scroll", this.enableAnimation);
+//     window.addEventListener("scroll", this.getOffset)
 //   }
-//   getOffsetTop() {
+//   getOffset() {
 //     this.distance = [...this.sections].map((section) => {
-//       const offset = section.offsetTop;
+//       const offsetTop = section.offsetTop;
 //       return {
 //         element: section,
-//         offset: offset - this.screenHalf,
-//       };
-//     });
+//         offset: Math.floor(offsetTop - this.screenHalf),
+//       }
+//     })
+//     return this.enableAnimation()
 //   }
 //   enableAnimation() {
 //     this.distance.forEach((item) => {
 //       return window.scrollY > item.offset
 //         ? item.element.classList.add(this.active)
-//         : item.element.classList.remove(this.active);
-//     });
+//         : item.element.classList.remove(this.active)
+//     })
 //   }
 //   stop() {
-//     window.removeEventListener("scroll", this.enableanimation);
+//     window.removeEventListener("scroll", this.getOffset)
 //   }
 // }

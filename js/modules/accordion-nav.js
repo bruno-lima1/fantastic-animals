@@ -2,15 +2,15 @@ export default class AccordionNav {
   constructor(askings, responses, event) {
     this.askings = document.querySelectorAll(askings);
     this.responses = document.querySelectorAll(responses);
-    this.active = "active"
+    this.active = "active";
     if (event === undefined) this.event = "click";
-    else this.event = event
-    this.toggleAccordion = this.toggleAccordion.bind(this)
+    else this.event = event;
+    this.toggleAccordion = this.toggleAccordion.bind(this);
   }
   init() {
     if (this.askings.length && this.responses.length) {
       this.responses[0].classList.add(this.active);
-      this.addEvent()
+      this.addEvent();
     }
     return this;
   }

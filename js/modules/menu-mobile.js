@@ -7,11 +7,11 @@ export default class MenuMobile {
     this.active = "active";
     if (event === undefined) this.event = "click";
     else this.event = event;
-    this.openMenu = this.openMenu.bind(this)
+    this.openMenu = this.openMenu.bind(this);
   }
   init() {
     if (this.button && this.menu) {
-      this.addEvent()
+      this.addEvent();
     }
     return this;
   }
