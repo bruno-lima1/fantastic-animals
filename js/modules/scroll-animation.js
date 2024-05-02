@@ -1,17 +1,3 @@
-export default function initScrollAnimation() {
-  const sections = document.querySelectorAll("[data-scroll-animation]");
-  if (sections.length) {
-    const screenHalf = window.innerHeight * 0.6;
-    sections.forEach((section) => {
-      window.addEventListener("scroll", showSections);
-      function showSections() {
-        const sectionIsVisible =
-          section.getBoundingClientRect().top - screenHalf < 0;
-        section.classList.toggle("active", sectionIsVisible);
-      }
-    });
-  }
-}
 
 
 
@@ -42,13 +28,27 @@ export default function initScrollAnimation() {
 
 
 
-// import debounce from "./debounce.js";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import debounce from "./debounce.js"
 
 // export default class ScrollAnimation {
 //   constructor(sections) {
 //     this.sections = document.querySelectorAll(sections)
-//     this.getOffset = debounce(this.getOffset.bind(this), 50)
-//     this.screenHalf = window.innerHeight * 0.6;
+//     this.getOffsetTop = debounce(this.getOffsetTop.bind(this), 50);
+//     this.screenHalf = window.innerHeight * .7;
 //     this.active = "active";
 //   }
 //   init() {
@@ -58,26 +58,25 @@ export default function initScrollAnimation() {
 //     return this;
 //   }
 //   addEvent() {
-//     window.addEventListener("scroll", this.getOffset)
+//     window.addEventListener("scroll", this.getOffsetTop)
 //   }
-//   getOffset() {
-//     this.distance = [...this.sections].map((section) => {
-//       const offsetTop = section.offsetTop;
+//   getOffsetTop() {
+//     this.data = [...this.sections].map((section) => {
 //       return {
 //         element: section,
-//         offset: Math.floor(offsetTop - this.screenHalf),
+//         offset: Math.floor(section.offsetTop - this.screenHalf),
 //       }
 //     })
-//     return this.enableAnimation()
+//     return this.enableScrollAnimation()
 //   }
-//   enableAnimation() {
-//     this.distance.forEach((item) => {
-//       return window.scrollY > item.offset
-//         ? item.element.classList.add(this.active)
-//         : item.element.classList.remove(this.active)
+//   enableScrollAnimation() {
+//     this.data.forEach((infos) => {
+//       return window.scrollY > infos.offset
+//         ? infos.element.classList.add(this.active)
+//         : infos.element.classList.remove(this.active)
 //     })
 //   }
 //   stop() {
-//     window.removeEventListener("scroll", this.getOffset)
+//     window.removeEventListener("scroll", this.getOffsetTop)
 //   }
 // }

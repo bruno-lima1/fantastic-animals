@@ -12,8 +12,7 @@ smoothScroll.init()
 
 
 
-import initScrollAnimation from "./modules/scroll-animation.js";
-initScrollAnimation();
+
 
 
 
@@ -42,6 +41,29 @@ bitcoinApi("https://blockchain.info/ticker", "[data-bitcoin]");
 import Slide from "./modules/slide.js";
 const slide = new Slide("[data-wrapper]", "[data-slide]");
 slide.init();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
