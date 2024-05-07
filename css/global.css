@@ -35,7 +35,7 @@ dd {
   display: grid;
   grid-template-columns: 1fr 120px minmax(300px, 800px) 1fr;
 }
-[data-scroll-animation] {
+/* [data-scroll-animation] {
   opacity: 0;
   transform: translate3d(-100px, 0, 0);
   transition: 0.5s;
@@ -43,7 +43,7 @@ dd {
 [data-scroll-animation].active {
   opacity: 1;
   transform: translate3d(0, 0, 0);
-}
+} */
 [data-days]::after {
   display: inline-block;
   content: "";
