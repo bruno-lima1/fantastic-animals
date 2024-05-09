@@ -45,14 +45,14 @@
 // import debounce from "./debounce.js"
 
 // export default class ScrollAnimation {
-//   constructor(sections) {
-//     this.sections = document.querySelectorAll(sections)
-//     this.getOffsetTop = debounce(this.getOffsetTop.bind(this), 50);
+//   constructor(section) {
+//     this.section = document.querySelectorAll(section)
+//     this.getOffsetTop = debounce(this.getOffsetTop.bind(this), 50)
 //     this.screenHalf = window.innerHeight * .7;
-//     this.active = "active";
+//     this.active = "active"
 //   }
 //   init() {
-//     if (this.sections.length) {
+//     if (this.section.length) {
 //       this.addEvent()
 //     }
 //     return this;
@@ -61,19 +61,19 @@
 //     window.addEventListener("scroll", this.getOffsetTop)
 //   }
 //   getOffsetTop() {
-//     this.data = [...this.sections].map((section) => {
+//     const data = [...this.section].map((element) => {
 //       return {
-//         element: section,
-//         offset: Math.floor(section.offsetTop - this.screenHalf),
+//         element,
+//         offsetTop: element.offsetTop - this.screenHalf
 //       }
 //     })
-//     return this.enableScrollAnimation()
+//     return this.enableScrollAnimation(data)
 //   }
-//   enableScrollAnimation() {
-//     this.data.forEach((infos) => {
-//       return window.scrollY > infos.offset
-//         ? infos.element.classList.add(this.active)
-//         : infos.element.classList.remove(this.active)
+//   enableScrollAnimation(data) {
+//     data.forEach((item) => {
+//       return window.scrollY > item.offsetTop
+//         ? item.element.classList.add(this.active)
+//         : item.element.classList.remove(this.active)
 //     })
 //   }
 //   stop() {

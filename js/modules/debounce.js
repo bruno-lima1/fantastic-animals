@@ -45,9 +45,9 @@
 // export default function debounce(callback, delay) {
 //   let timer;
 //   return (...args) => {
-//     clearTimeout(timer);
+//     if (timer) clearTimeout(timer)
 //     timer = setTimeout(() => {
-//       callback(...args);
+//       callback(...args)
 //       timer = null
 //     }, delay)
 //   }
