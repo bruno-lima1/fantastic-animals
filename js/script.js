@@ -38,7 +38,7 @@ animalsData("./animals-data.json", "[data-number]")
 import bitcoinApi from "./modules/bitcoin-api.js";
 bitcoinApi("https://blockchain.info/ticker", "[data-bitcoin]");
 
-import Slide from "./slide.js";
+import Slide from "./modules/slide.js";
 const slide = new Slide("[data-wrapper]", "[data-slide]");
 slide.init()
 
