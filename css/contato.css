@@ -3,7 +3,7 @@
   display: grid;
   grid-template-columns: 70px 300px 1fr;
   gap: 0 3rem;
-  padding-bottom: 4rem;
+  padding: 0 2rem 4rem 2rem;
 }
 .contato .titulo {
   padding-bottom: 2rem;
@@ -17,8 +17,8 @@
 .contato ul .bitcoin {
   background: #2fff00;
   border-radius: 4px;
-  padding: 0 0.25rem;
-  margin: 0.25rem;
+  padding: .25rem;
+  margin: 0 0.25rem;
   font-weight: bold;
   color: #000;
 }
@@ -26,7 +26,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  line-height: 2;
+  padding: .40rem 0;
 }
 .contato li::before {
   content: "";

@@ -2,7 +2,7 @@
   grid-column: 2/4;
   display: grid;
   grid-template-columns: 120px 1fr;
-  padding: 4rem 0;
+  padding: 4rem 2rem;
 }
 .numeros .titulo {
   padding-bottom: 2rem;

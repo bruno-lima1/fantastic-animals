@@ -2,7 +2,7 @@
   grid-column: 2/4;
   display: grid;
   grid-template-columns: 120px 1fr;
-  padding-bottom: 4rem;
+  padding: 0 2rem 4rem 2rem;
 }
 .faq .titulo {
   grid-column: 1/4;
