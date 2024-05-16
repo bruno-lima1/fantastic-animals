@@ -42,41 +42,29 @@
 
 
 
-import debounce from "./debounce.js"
+// import debounce from "./debounce.js"
 
-export default class ScrollAnimation {
-  constructor(section) {
-    this.section = document.querySelectorAll(section)
-    this.getOffsetTop = debounce(this.getOffsetTop.bind(this), 50)
-    this.screenHalf = window.innerHeight * .7;
-    this.active = "active"
-  }
-  init() {
-    if (this.section.length) {
-      this.addEvent()
-    }
-    return this;
-  }
-  addEvent() {
-    window.addEventListener("scroll", this.getOffsetTop)
-  }
-  getOffsetTop() {
-    const data = [...this.section].map((element) => {
-      return {
-        element,
-        offsetTop: element.offsetTop - this.screenHalf
-      }
-    })
-    return this.enableScrollAnimation(data)
-  }
-  enableScrollAnimation(data) {
-    data.forEach((item) => {
-      return window.scrollY > item.offsetTop
-        ? item.element.classList.add(this.active)
-        : item.element.classList.remove(this.active)
-    })
-  }
-  stop() {
-    window.removeEventListener("scroll", this.getOffsetTop)
-  }
-}
+// export default class ScrollAnimation {
+//   constructor(sections) {
+//     this.sections = document.querySelectorAll(sections)
+//     this.enableScrollAnimation = debounce(this.enableScrollAnimation.bind(this), 50)
+//     this.screenHalf = window.innerHeight * .7
+//   }
+//   init() {
+//     if (this.sections.length) {
+//       this.addEvents()
+//     }
+//     return this;
+//   }
+//   addEvents() {
+//     window.addEventListener("scroll", this.enableScrollAnimation)
+//   }
+//   enableScrollAnimation() {
+//     this.sections.forEach((section) => {
+//       const offsetTop = section.offsetTop
+//       return (offsetTop - this.screenHalf) < window.scrollY
+//         ? section.classList.add("active")
+//         : section.classList.remove("active")
+//     })
+//   }
+// }
