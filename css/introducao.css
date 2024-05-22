@@ -3,7 +3,7 @@
   display: grid;
   grid-template-columns: 105px 300px 1fr;
   gap: 0 1rem;
-  padding: 2rem .75rem;
+  padding: 2rem .75rem 0 .75rem;
 }
 .introducao-imagens {
   height: 376px;

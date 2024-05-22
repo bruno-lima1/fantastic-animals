@@ -1,7 +1,7 @@
 [data-wrapper] {
   grid-column: 1/5;
   overflow: hidden;
-  padding: 1rem .75rem;
+  padding: 2rem .75rem 0 .75rem;
 }
 [data-slide] {
   display: flex;
