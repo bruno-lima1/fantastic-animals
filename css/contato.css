@@ -57,9 +57,6 @@
     grid-template-columns: 1fr;
     gap: 0;
   }
-  .contato-mapa {
-    padding-bottom: 1rem;
-  }
   .contato ul {
     margin-left: 3rem;
   }
