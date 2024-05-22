@@ -34,9 +34,9 @@ export default class Slide {
     this.wrapper.addEventListener("touchend", this.onEnd)
   }
   onStart(event) {
-    event.preventDefault()
     let movetype
     if (event.type === "mousedown") {
+      event.preventDefault()
       movetype = "mousemove"
       this.values.startPosition = event.clientX
     } else if (event.type === "touchstart") {
