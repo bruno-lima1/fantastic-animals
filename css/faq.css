@@ -2,7 +2,7 @@
   grid-column: 2/4;
   display: grid;
   grid-template-columns: 120px 1fr;
-  padding: 1rem .75rem;
+  padding: 2rem .75rem;
 }
 .faq dl {
   grid-column: 2;
