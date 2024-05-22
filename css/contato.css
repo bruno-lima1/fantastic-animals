@@ -3,7 +3,7 @@
   display: grid;
   grid-template-columns: 70px 300px 1fr;
   gap: 0 3rem;
-  padding: 2rem .75rem;
+  padding: 2rem .75rem 0 .75rem;
 }
 .contato-mapa {
   grid-area: 2/2;
@@ -56,9 +56,6 @@
   .contato {
     grid-template-columns: 1fr;
     gap: 0;
-  }
-  .contato .titulo {
-    padding-bottom: 1rem;
   }
   .contato-mapa {
     padding-bottom: 1rem;

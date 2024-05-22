@@ -61,9 +61,6 @@
   .introducao {
     grid-template-columns: 140px 1fr;
   }
-  .introducao .titulo {
-    padding-bottom: 1rem;
-  }
   .introducao-imagens {
     grid-column: 1;
   }

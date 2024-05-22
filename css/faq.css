@@ -54,9 +54,6 @@
   .faq {
     grid-template-columns: 1fr;
   }
-  .faq .titulo {
-    padding-bottom: 1rem;
-  }
   .faq dl {
     grid-column: 1/3;
   }

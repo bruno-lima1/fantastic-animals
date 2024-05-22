@@ -1,7 +1,6 @@
 .header {
   background: #ffbb55;
   grid-column: 3/5;
-  margin: 2rem .75rem;
 }
 .header-menu {
   display: flex;
@@ -28,6 +27,5 @@
 @media (max-width: 800px) {
   .header {
     grid-column: 1/5;
-    margin-top: 0;
   }
 }
