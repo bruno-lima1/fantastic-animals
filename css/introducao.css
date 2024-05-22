@@ -3,7 +3,7 @@
   display: grid;
   grid-template-columns: 105px 300px 1fr;
   gap: 0 1rem;
-  padding: 0 2rem 4rem 2rem;
+  padding: 1rem .75rem;
 }
 .introducao .titulo {
   padding-bottom: 2rem;
@@ -63,7 +63,6 @@
 @media (max-width: 800px) {
   .introducao {
     grid-template-columns: 140px 1fr;
-    padding: 0 0.75rem 2.5rem 0.75rem;
   }
   .introducao .titulo {
     padding-bottom: 1rem;

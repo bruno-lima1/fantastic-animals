@@ -3,7 +3,7 @@
   display: grid;
   grid-template-columns: 70px 300px 1fr;
   gap: 0 3rem;
-  padding: 0 2rem 4rem 2rem;
+  padding: 1rem .75rem;
 }
 .contato .titulo {
   padding-bottom: 2rem;
@@ -59,7 +59,6 @@
   .contato {
     grid-template-columns: 1fr;
     gap: 0;
-    padding: 0 0.75rem 2.5rem 0.75rem;
   }
   .contato .titulo {
     padding-bottom: 1rem;
