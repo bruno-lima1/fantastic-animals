@@ -4,10 +4,6 @@
   grid-template-columns: 120px 1fr;
   padding: 1rem .75rem;
 }
-.faq .titulo {
-  grid-column: 1/4;
-  padding-bottom: 2rem;
-}
 .faq dl {
   grid-column: 2;
 }

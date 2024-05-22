@@ -4,9 +4,6 @@
   grid-template-columns: 120px 1fr;
   padding: 1rem .75rem;
 }
-.numeros .titulo {
-  padding-bottom: 2rem;
-}
 .numeros-sobre {
   display: grid;
   grid-template-columns: 1fr 1fr;
