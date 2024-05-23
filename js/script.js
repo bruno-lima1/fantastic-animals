@@ -12,7 +12,9 @@ smoothScroll.init()
 
 
 
-
+import ScrollAnimation from "./modules/scroll-animation.js";
+const scrollAnimation = new ScrollAnimation("[data-scroll-animation]");
+scrollAnimation.init()
 
 
 
