@@ -1,7 +1,7 @@
 .dropdown-menu {
   position: absolute;
   background: #e54;
-  border: 2px solid #333;
+  border: 2px solid #1d1d1f;
   display: none;
   z-index: 1;
 }
@@ -14,7 +14,7 @@
   transition: .2s;
 }
 .dropdown-menu a:hover {
-  color: #fff;
+  color: #f5f5f7;
 }
 .dropdown-menu::before {
   content: "";
@@ -37,9 +37,9 @@
 }
 @media (max-width: 800px) {
   .dropdown-menu a:hover {
-    color: #000;
+    color: #1d1d1f;
   }
   .dropdown-menu a:active {
-    color: #fff;
+    color: #f5f5f7;
   }
 }

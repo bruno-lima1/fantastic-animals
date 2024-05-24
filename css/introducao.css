@@ -18,14 +18,14 @@
 }
 .introducao-imagens::-webkit-scrollbar-thumb {
   background: #fb5;
-  border-left: 4px solid #efebe2;
-  border-right: 4px solid #efebe2;
+  border-left: 4px solid #f5f5f7;
+  border-right: 4px solid #f5f5f7;
 }
 .introducao-imagens::-webkit-scrollbar-thumb:hover {
   background: rgb(224, 164, 73);
 }
 .introducao-imagens::-webkit-scrollbar-track {
-  background: #efebe2;
+  background: #f5f5f7;
 }
 .introducao h2::before {
   content: "";

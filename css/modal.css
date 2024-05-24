@@ -18,8 +18,8 @@
   padding: 2rem;
   max-width: 475px;
   border: 10px solid #fb0;
-  background: #555;
-  box-shadow: 0 0 0 10px #555;
+  background: #1d1d1f;
+  box-shadow: 0 0 0 10px #1d1d1f;
 }
 .modal input {
   width: 100%;
@@ -29,13 +29,13 @@
   font-family: "Rubik", sans-serif;
   padding: 0.75rem;
   outline: none;
-  border-radius: 25px;
-  border: 1px solid #333;
-  background: #555;
-  color: #fff;
+  border-radius: 15px;
+  border: 1px solid #f5f5f7;
+  background: #1d1d1f;
+  color: #f5f5f7;
 }
 .modal input:focus {
-  border: 2px solid #333;
+  border: 2px solid #f5f5f7;
 }
 .modal-close {
   position: absolute;
@@ -51,15 +51,19 @@
   border-radius: 50%;
   cursor: pointer;
   box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
-  border: 5px solid #555;
+  border: 5px solid #1d1d1f;
+  transition: .3s;
+}
+.modal-close:hover {
+  background: rgb(189, 66, 13);
 }
 .modal-enter {
   background: #e51;
   border: none;
-  color: #fff;
+  color: f5f5f7;
   font-size: 1rem;
   font-family: "Rubik", sans-serif;
-  border-radius: 25px;
+  border-radius: 15px;
   width: 100%;
   padding: 0.75rem;
   transition: 0.3s;
@@ -82,11 +86,17 @@
   }
 }
 @media (max-width: 800px) {
-  .modal-enter:hover {
-    background: #e54;
+  /* .modal-close:hover {
+    background: #e51;
   }
-  .modal-enter.active {
-    background: rgb(168, 60, 48);
+  .modal-enter:hover {
+    background: #e51;
+  } */
+  .modal-close:active {
+    background: rgb(189, 66, 13);
+  }
+  .modal-enter:active {
+    background: rgb(189, 66, 13);
   }
 }
 @media (max-width: 700px) {

@@ -1,7 +1,7 @@
 [data-menu-mobile] {
   display: none;
-  color: #fff;
-  background: #000;
+  color: #f5f5f7;
+  background: #1d1d1f;
   font-weight: 100;
 }
 @media (max-width: 800px) {
