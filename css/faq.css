@@ -41,7 +41,7 @@
   animation: accordionNav 0.5s forwards;
 }
 .faq button[aria-expanded="true"]::after {
-  transform: rotate(180deg);
+  transform: rotateX(180deg);
 }
 @keyframes accordionNav {
   from {
