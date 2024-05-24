@@ -12,7 +12,7 @@
   display: flex;
   cursor: pointer;
   padding-left: 0;
-  background: #1d1d1f;
+  background: #000;
 
 }
 .faq button::before {
