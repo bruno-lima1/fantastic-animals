@@ -33,24 +33,30 @@
   height: 10px;
   left: -30px;
 }
-[data-semana]::after {
+[data-days]::after {
+  border: 2px solid #fff;
+  display: inline-block;
   content: "";
   width: 15px;
   height: 15px;
   background: #f33;
   border-radius: 50%;
-  margin: 0 0 2px 5px;
+  margin: 0 0 1px 4px;
+  cursor: pointer;
 }
-.time-open,
-.time-close {
-  padding-left: 0.25rem;
+[data-days].active::after {
+  background: rgb(0, 255, 0);
+}
+[data-days].active .time-open {
+  display: flex;
 }
 [data-days].active .time-close,
 [data-days] .time-open {
   display: none;
 }
-[data-days].active .time-open {
-  display: flex;
+.time-open,
+.time-close {
+  padding-left: 0.25rem;
 }
 @media (max-width: 800px) {
   .contato {

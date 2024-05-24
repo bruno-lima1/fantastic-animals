@@ -12,6 +12,8 @@
   display: flex;
   cursor: pointer;
   padding-left: 0;
+  background: #000;
+
 }
 .faq button::before {
   content: "";
@@ -25,6 +27,7 @@
   width: 30px;
   height: 30px;
   transition: 0.3s;
+  background: url(../img/icons8-seta-para-expandir-96\ \(1\).png);
 }
 .faq dt {
   position: relative;

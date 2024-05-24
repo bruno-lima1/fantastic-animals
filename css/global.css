@@ -2,6 +2,8 @@
 body {
   margin: 0px;
   font-family: "Rubik", sans-serif;
+  background: #000;
+  color: #ccc;
 }
 h1,
 h2,
@@ -43,107 +45,4 @@ dd {
 [data-scroll-animation].active {
   opacity: 1;
   transform: translate3d(0, 0, 0);
-}
-[data-days]::after {
-  display: inline-block;
-  content: "";
-  width: 15px;
-  height: 15px;
-  background: rgb(255, 0, 0);
-  border-radius: 50%;
-  margin: 0 0 1px 4px;
-  cursor: pointer;
-}
-[data-days].active::after {
-  background: rgb(13, 255, 0);
-}
-@media (prefers-color-scheme: light) {
-  body {
-    background: #fff;
-    color: #333;
-  }
-  .faq button {
-    background: #fff;
-  }
-  .faq button::after {
-    background: url(../img/icons8-seta-para-expandir-96.png);
-  }
-  .faq dt {
-    background: #fff;
-  }
-  .faq dt::after {
-    background: url(../img/icons8-seta-para-expandir-96.png);
-  }
-  .modal {
-    background: #fff;
-    box-shadow: 0 0 0 10px #fff;
-  }
-  .modal input {
-    border: 1px solid #ccc;
-    background: #fff;
-    color: #000;
-  }
-  .modal input:focus {
-    border: 2px solid #ccc;
-  }
-  .modal .modal-close {
-    border: 5px solid #fff;
-  }
-  .titulo {
-    color: #000;
-  }
-  [data-days]::after {
-    border: 2px solid #000;
-  }
-  [data-days].open::after {
-    border: 2px solid #000;
-  }
-  .js [data-menu-mobile] {
-    color: #000;
-    background: #fff;
-  }
-  .js [data-menu-mobile]::before {
-    background: url(../img/icons8-cardápio-light.svg);
-  }
-}
-@media (prefers-color-scheme: dark) {
-  body {
-    background: #000;
-    color: #ccc;
-  }
-  .faq button {
-    background: #000;
-  }
-  .faq button::after {
-    background: url(../img/icons8-seta-para-expandir-96\ \(1\).png);
-  }
-  .modal {
-    background: #555;
-    box-shadow: 0 0 0 10px #555;
-  }
-  .modal input {
-    border: 1px solid #333;
-    background: #555;
-    color: #fff;
-  }
-  .modal input:focus {
-    border: 2px solid #333;
-  }
-  .modal .modal-close {
-    border: 5px solid #555;
-  }
-  [data-days]::after {
-    border: 2px solid #ffffff;
-  }
-  [data-days].open::after {
-    border: 2px solid #ffffff;
-  }
-  .js [data-menu-mobile] {
-    color: #fff;
-    background: #000;
-    font-weight: 100;
-  }
-  .js [data-menu-mobile]::before {
-    background: url(../img/icons8-cardápio.svg);
-  }
 }

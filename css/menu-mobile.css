@@ -1,5 +1,8 @@
 [data-menu-mobile] {
   display: none;
+  color: #fff;
+  background: #000;
+  font-weight: 100;
 }
 @media (max-width: 800px) {
   .js [data-menu-mobile] {
@@ -16,6 +19,7 @@
     z-index: 2;
   }
   .js [data-menu-mobile]::before {
+    background: url(../img/icons8-cardápio.svg);
     content: "";
     background-size: cover;
     width: 17px;
