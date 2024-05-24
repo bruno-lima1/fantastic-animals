@@ -22,12 +22,12 @@
   height: 10px;
 }
 .faq button::after {
+  background: url(../img/icons8-seta-para-expandir-96\ \(1\).png);
   content: "";
   background-size: cover;
   width: 30px;
   height: 30px;
   transition: 0.3s;
-  background: url(../img/icons8-seta-para-expandir-96\ \(1\).png);
 }
 .faq dt {
   position: relative;
