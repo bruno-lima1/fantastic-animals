@@ -1,17 +1,19 @@
 .modal-container {
   position: fixed;
   top: 0;
-  background: rgba(0, 0, 0, 0.5);
   height: 100%;
   width: 100%;
+  z-index: 2;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.5s;
   display: flex;
   align-items: center;
   justify-content: center;
-  display: none;
-  z-index: 2;
 }
 .modal-container.active {
   display: flex;
+  max-height: 800px;
 }
 .modal {
   position: relative;
