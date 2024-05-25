@@ -13,7 +13,6 @@
   cursor: pointer;
   padding-left: 0;
   background: #000;
-
 }
 .faq button::before {
   content: "";
@@ -27,31 +26,19 @@
   background-size: cover;
   width: 30px;
   height: 30px;
-  transition: 0.3s;
-}
-.faq dt {
-  position: relative;
-}
-.faq dd {
-  display: none;
-  padding-left: 28px;
-}
-.faq dd.active {
-  display: block;
-  animation: accordionNav 0.5s forwards;
+  transition: 0.5s;
 }
 .faq button[aria-expanded="true"]::after {
   transform: rotateX(180deg);
 }
-@keyframes accordionNav {
-  from {
-    opacity: 0;
-    max-height: 0;
-  }
-  to {
-    opacity: 1;
-    max-height: 95px;
-  }
+.faq dd {
+  padding-left: 28px;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.faq dd.active {
+  max-height: 95px;
 }
 @media (max-width: 800px) {
   .faq {
