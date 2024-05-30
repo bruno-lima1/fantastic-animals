@@ -24,7 +24,7 @@
     background-size: cover;
     width: 17px;
     height: 17px;
-    transition: 0.5s;
+    transition: 0.3s;
   }
   .js [data-menu-mobile].active::before {
     transform: rotate(90deg);
@@ -39,7 +39,7 @@
     border-radius: 0 7px 7px 0;
     max-height: 0;
     overflow: hidden;
-    transition: .3s;
+    transition: .5s;
     display: flex;
     flex-direction: column;
   }
