@@ -39,7 +39,7 @@
     border-radius: 0 7px 7px 0;
     max-height: 0;
     overflow: hidden;
-    transition: .5s;
+    transition: .3s;
     display: flex;
     flex-direction: column;
   }
