@@ -5,9 +5,6 @@
 }
 .header-menu {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  align-items: center;
 }
 .header-menu a {
   color: #1d1d1f;
