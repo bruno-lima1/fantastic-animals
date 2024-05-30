@@ -16,7 +16,7 @@
 }
 .header-login::after {
   content: "";
-  background: url("../img/icons8-seta-para-a-direita-96.png");
+  background: url("./../img/icons8-seta-longa-à-direita-52.png");
   background-size: cover;
   width: 16px;
   height: 16px;
