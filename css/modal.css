@@ -90,6 +90,9 @@
   .modal-enter:active {
     background: rgb(189, 66, 13);
   }
+  .modal-close {
+    align-items: center;
+  }
 }
 @media (max-width: 700px) {
   .modal {
