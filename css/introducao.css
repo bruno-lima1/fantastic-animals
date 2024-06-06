@@ -31,16 +31,14 @@
 }
 [data-tab-content] li.active {
   display: block;
-  animation: tabNav .5s forwards;
+  animation: tabNav .7s forwards;
 }
 @keyframes tabNav {
   from {
     opacity: 0;
-    transform: translate3d(-35px, 0, 0)
   }
   to {
     opacity: 1;
-    transform: translate3d(0, 0, 0)
   }
 }
 @media (max-width: 800px) {
