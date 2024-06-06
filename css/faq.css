@@ -12,7 +12,7 @@
   display: flex;
   cursor: pointer;
   padding-left: 0;
-  background: #000;
+  background: #212121;
 }
 .faq button::before {
   content: "";
@@ -21,7 +21,7 @@
   height: 10px;
 }
 .faq button::after {
-  background: url(../img/icons8-seta-para-expandir-96\ \(1\).png);
+  background: url(../img/icons8-expand-arrow-96.png);
   content: "";
   background-size: cover;
   width: 30px;
