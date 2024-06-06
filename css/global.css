@@ -67,12 +67,18 @@ dd {
 ::-webkit-scrollbar-button:single-button:vertical:decrement {
   background: url('./../img/icons8-sort-down-100\ \(1\).png') #424242 center / 9px no-repeat;
 }
+::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+  background: url('./../img/icons8-ordem-descendente-100\(3\).png') #4f4f4f center / 9px no-repeat;
+}
 ::-webkit-scrollbar-button:single-button:vertical:decrement:active {
-  background: url('./../img/icons8-ordem-descendente-100.png') #b5b5b5 center / 9px no-repeat;
+  background: url('./../img/icons8-ordem-descendente-100\(5\).png') #b5b5b5 center / 9px no-repeat;
 }
 ::-webkit-scrollbar-button:single-button:vertical:increment {
-  background: url('./../img/icons8-sort-down-100.png') #424242 center / 9px no-repeat;
+  background: url('./../img/icons8-sort-down-100\(2\).png') #424242 center / 9px no-repeat;
+}
+::-webkit-scrollbar-button:single-button:vertical:increment:hover {
+  background: url('./../img/icons8-ordem-descendente-100\ \(4\).png') #4f4f4f center / 9px no-repeat;
 }
 ::-webkit-scrollbar-button:single-button:vertical:increment:active {
-  background: url('./../img/icons8-ordem-descendente-100\ \(1\).png') #b5b5b5 center / 9px no-repeat;
+  background: url('./../img/icons8-ordem-descendente-100\ \(6\).png') #b5b5b5 center / 9px no-repeat;
 }
