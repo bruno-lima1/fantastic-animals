@@ -13,20 +13,6 @@
 .introducao-imagens li {
   cursor: pointer;
 }
-.introducao-imagens::-webkit-scrollbar {
-  width: 17px;
-}
-.introducao-imagens::-webkit-scrollbar-track {
-  background: #424242;
-}
-.introducao-imagens::-webkit-scrollbar-thumb {
-  background: #fb5;
-  border-left: 2px solid #424242;
-  border-right: 2px solid #424242;
-}
-.introducao-imagens::-webkit-scrollbar-thumb:hover {
-  background: rgb(224, 164, 73);
-}
 .introducao h2::before {
   content: "";
   display: inline-block;

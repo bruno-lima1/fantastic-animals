@@ -64,3 +64,13 @@ dd {
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(231, 169, 78);
 }
+::-webkit-scrollbar-button:single-button:vertical:decrement {
+  background: url('./../img/icons8-sort-down-100\ \(1\).png') center no-repeat;
+  background-color: #424242;
+  background-size: 10px;
+}
+::-webkit-scrollbar-button:single-button:vertical:increment {
+  background: url('./../img/icons8-sort-down-100.png') no-repeat center;
+  background-size: 10px;
+  background-color: #424242;
+}
