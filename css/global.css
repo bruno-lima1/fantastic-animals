@@ -1,16 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
+html {
+  overflow-x: hidden;
+}
 body {
   margin: 0px;
   font-family: "Rubik", sans-serif;
   background: #000;
   color: #f5f5f7;
-  overflow-x: hidden;
-}
-html {
-  overflow-x: hidden;
-}
-* {
-  box-sizing: border-box;
 }
 h1,
 h2,
@@ -35,9 +31,6 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
-}
-iframe {
-  max-width: 100%;
 }
 p,
 dd {
