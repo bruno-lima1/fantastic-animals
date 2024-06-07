@@ -41,13 +41,13 @@
 }
 .modal-close {
   position: absolute;
-  top: -25px;
-  right: -25px;
+  top: -26px;
+  right: -26px;
   border: none;
   background: #e51;
   color: #f5f5f7;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2.25rem;
+  height: 2.25rem;
   font-size: 1.25rem;
   font-family: "Rubik", sans-serif;
   border-radius: 50%;
@@ -90,18 +90,8 @@
   .modal-enter:active {
     background: rgb(189, 66, 13);
   }
-  .modal-close {
-    align-items: center;
-  }
-}
-@media (max-width: 700px) {
   .modal {
-    max-width: 350px;
+    max-width: 175px;
+    padding: 1rem;
   }
 }
-@media (max-width: 500px) {
-  .modal {
-    max-width: 275px;
-  }
-}
-
