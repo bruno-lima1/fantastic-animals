@@ -1,14 +1,13 @@
 [data-slide-container] {
   grid-column: 1/5;
   overflow: hidden;
-  padding: 3.5rem 0 2rem 0;
+  padding: 3.5rem 2rem 2rem 2rem;
 }
 [data-control] ul {
   display: flex;
   justify-content: center;
-  margin-top: 40px;
   flex-wrap: wrap;
-  margin-bottom: 20px;
+  padding-bottom: 1rem;
 }
 [data-control] li {
   opacity: .8;
