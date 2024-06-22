@@ -18,7 +18,8 @@
 .modal {
   position: relative;
   padding: 2rem;
-  max-width: 475px;
+  max-width: 530px;
+  width: 58vw;
   border: 10px solid #fb0;
   background: #212121;
   box-shadow: 0 0 0 10px #212121;
@@ -91,7 +92,6 @@
     background: rgb(189, 66, 13);
   }
   .modal {
-    max-width: 230px;
     padding: 1rem;
   }
 }
