@@ -1,22 +1,25 @@
-import debounce from "./debounce.js";
+import debounce from "./debounce.js"
 
-export default class Slide {
+export class Slide {
   constructor(wrapper, slide) {
     this.wrapper = document.querySelector(wrapper);
     this.slide = document.querySelector(slide)
     this.values = {
       startPosition: 0,
-      distance: 0,
       movePosition: 0,
+      distance: 0,
       endPosition: 0
     }
     this.active = "active"
+    this.controlEvent = new Event("controlEvent")
   }
   init() {
     if (this.wrapper && this.slide) {
       this.bindEvents()
-      this.addSlideEvents()
+      this.slideEvents()
       this.centralizeSlide(0)
+      this.enableControl()
+      this.enableTransition(true)
     }
     return this;
   }
@@ -24,48 +27,55 @@ export default class Slide {
     this.onStart = this.onStart.bind(this)
     this.onMove = this.onMove.bind(this)
     this.onEnd = this.onEnd.bind(this)
-    this.centralizeWhenResize = debounce(this.centralizeWhenResize.bind(this), 1000)
+    this.centralizeWhenResize = this.centralizeWhenResize.bind(this)
   }
-  addSlideEvents() {
+  slideEvents() {
     this.wrapper.addEventListener("mousedown", this.onStart)
     this.wrapper.addEventListener("touchstart", this.onStart)
     this.wrapper.addEventListener("mouseup", this.onEnd)
     this.wrapper.addEventListener("touchend", this.onEnd)
-    window.addEventListener("resize", this.centralizeWhenResize)
+    window.addEventListener("resize", debounce(this.centralizeWhenResize, 1000))
   }
   onStart(event) {
-    event.preventDefault()
     if (event.type === "mousedown") {
+      event.preventDefault()
       this.wrapper.addEventListener("mousemove", this.onMove)
       this.values.startPosition = event.clientX
-    } else {
-      this.wrapper.addEventListener("touchmove", this.onMove)
+    } else if (event.type === "touchstart") {
       this.values.startPosition = event.changedTouches[0].clientX
+      this.wrapper.addEventListener("touchmove", this.onMove)
     }
     this.enableTransition(false)
   }
   onMove(event) {
     if (event.type === "mousemove") {
-      this.values.distance = this.values.startPosition - event.clientX
-    } else {
-      this.values.distance = this.values.startPosition - event.changedTouches[0].clientX
+      this.values.movePosition = this.values.startPosition - event.clientX
+    } else if (event.type === "touchmove") {
+      this.values.movePosition = this.values.startPosition - event.changedTouches[0].clientX
     }
-    this.values.movePosition = this.values.endPosition - this.values.distance
-    this.moveSlide(this.values.movePosition)
+    this.values.distance = this.values.endPosition - this.values.movePosition
+    this.moveSlide(this.values.distance)
   }
-  moveSlide(position) {
-    this.slide.style.transform = `translate3d(${position}px, 0, 0)`
+  moveSlide(distance) {
+    this.slide.style.transform = `translate3d(${distance}px, 0, 0)`
   }
-  onEnd() {
-    this.wrapper.removeEventListener("mousemove", this.onMove)
-    this.values.endPosition = this.values.movePosition
+  onEnd(event) {
+    let movetype;
+    if (event.type === "mouseup") {
+      movetype = "mousemove"
+    } else if (event.type === "touchend") {
+      movetype = "touchmove"
+    }
+    this.wrapper.removeEventListener(movetype, this.onMove)
+    this.values.endPosition = this.values.distance
     this.changeSlide()
     this.enableTransition(true)
+    this.wrapper.dispatchEvent(this.controlEvent)
   }
   centralizeSlide(index) {
     this.slideArray = [...this.slide.children].map((element) => {
-      const margin = (this.wrapper.offsetWidth - element.offsetWidth) / 2
-      const offsetLeft = -(element.offsetLeft - margin)
+      this.margin = (this.wrapper.offsetWidth - element.offsetWidth) / 2;
+      const offsetLeft = this.margin - element.offsetLeft
       return {
         element,
         offsetLeft
@@ -73,10 +83,10 @@ export default class Slide {
     })
     this.moveSlide(this.slideArray[index].offsetLeft)
     this.values.endPosition = this.slideArray[index].offsetLeft
-    this.indexSlide(index)
+    this.slideIndex(index)
     this.enableAnimation(index)
   }
-  indexSlide(index) {
+  slideIndex(index) {
     this.index = {
       prev: index - 1 === -1 ? undefined : index - 1,
       active: index,
@@ -84,26 +94,51 @@ export default class Slide {
     }
   }
   changeSlide() {
-    if (this.values.distance > 0 && this.index.next !== undefined) {
+    if (this.values.movePosition > 0 && this.index.next !== undefined) {
       this.centralizeSlide(this.index.next)
-    } else if (this.values.distance < 0 && this.index.prev !== undefined) {
+    } else if (this.values.movePosition < 0 && this.index.prev !== undefined) {
       this.centralizeSlide(this.index.prev)
-    } else if (this.values.distance > 0 && this.index.next === undefined) {
-      this.centralizeSlide(this.index.active)
-    } else if (this.values.distance < 0 && this.index.prev === undefined) {
+    } else if (this.values.movePosition > 0 && this.index.next === undefined || this.values.movePosition < 0 && this.index.prev === undefined) {
       this.centralizeSlide(this.index.active)
     }
   }
   enableTransition(active) {
-    this.slide.style.transition = active ? ".5s" : "";
+    this.slide.style.transition = active ? ".5s" : ""
   }
   enableAnimation(index) {
-    this.slideArray.forEach((item) => {
-      item.element.classList.remove("active")
+    [...this.slide.children].map((item) => {
+      item.classList.remove(this.active)
     })
     this.slideArray[index].element.classList.add(this.active)
   }
   centralizeWhenResize() {
     this.centralizeSlide(this.index.active)
+  }
+} 
+export default class SlideNav extends Slide {
+  constructor(wrapper, slide, control) {
+    super(wrapper, slide)
+    this.control = document.querySelector(control)
+    this.changeControl = this.changeControl.bind(this)
+  }
+  enableControl() {
+    this.controlArray = [...this.control.children]
+    this.controlArray[this.index.active].classList.add(this.active)
+    this.controlArray.forEach((item, index) => {
+      item.addEventListener("click", () => {
+        this.controlArray.forEach((element) => {
+          element.classList.remove(this.active)
+        })
+        item.classList.add(this.active)
+        this.centralizeSlide(index)
+      })
+      this.wrapper.addEventListener("controlEvent", this.changeControl)
+    })
+  }
+  changeControl() {
+    this.controlArray.forEach((element) => {
+      element.classList.remove(this.active)
+    })
+    this.controlArray[this.index.active].classList.add(this.active)
   }
 }
