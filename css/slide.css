@@ -1,3 +1,8 @@
+[data-slide-container] {
+  grid-column: 1/5;
+  overflow: hidden;
+  padding: 3.5rem 0 2rem 0;
+}
 [data-control] ul {
   display: flex;
   justify-content: center;
