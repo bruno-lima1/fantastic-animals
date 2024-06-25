@@ -1,7 +1,9 @@
 [data-slide-container] {
   grid-column: 1/5;
   overflow: hidden;
-  padding: 3.5rem 2rem 2rem 2rem;
+  padding: 3.5rem 0 2rem 0;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 [data-control] ul {
   display: flex;
