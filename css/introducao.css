@@ -43,9 +43,19 @@
 }
 @media (max-width: 800px) {
   .introducao {
-    grid-template-columns: 140px 1fr;
+  grid-template-columns: 160px 1fr;
   }
   .introducao-imagens {
-    grid-column: 1;
+    grid-area: 2/1;
+  }
+}
+@media (max-width: 525px) {
+  .introducao .titulo {
+    grid-column: 1/1
+  }
+}
+@media (max-width: 375px) {
+  .introducao {
+    grid-template-columns: 105px 1fr;
   }
 }

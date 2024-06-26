@@ -16,7 +16,6 @@ export default class ScrollAnimation {
     window.addEventListener("scroll", this.enableScrollAnimation)
   }
   enableScrollAnimation() {
-    console.log("test")
     this.sections.forEach((section) => {
       return section.offsetTop - this.screenHalf < window.scrollY
         ? section.classList.add("active")

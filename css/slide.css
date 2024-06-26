@@ -48,3 +48,9 @@
   transform: scale(1);
   opacity: 1;
 }
+@media (max-width: 375px) {
+  [data-control] li {
+  width: 40px;
+  height: 40px;
+  } 
+}
