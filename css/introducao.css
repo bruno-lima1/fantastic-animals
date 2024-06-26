@@ -51,9 +51,14 @@
 }
 @media (max-width: 525px) {
   .introducao {
-    grid-template-columns: 160px 1fr;
+    grid-template-columns: 212px 1fr;
   }
   .introducao .titulo {
     grid-column: 1/1
+  }
+}
+@media (max-width: 375px) {
+  .introducao {
+    grid-template-columns: 160px 1fr;
   }
 }
