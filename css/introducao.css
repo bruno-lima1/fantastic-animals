@@ -1,7 +1,7 @@
 .introducao {
   grid-column: 2/4;
   display: grid;
-  grid-template-columns: 105px 300px 1fr;
+  grid-template-columns: 105px 225px 1fr;
   padding: 3.5rem 2rem 2rem 2rem;
 }
 .introducao-imagens {
@@ -43,19 +43,17 @@
 }
 @media (max-width: 800px) {
   .introducao {
-  grid-template-columns: 160px 1fr;
+  grid-template-columns: 225px 1fr;
   }
   .introducao-imagens {
     grid-area: 2/1;
   }
 }
 @media (max-width: 525px) {
+  .introducao {
+    grid-template-columns: 160px 1fr;
+  }
   .introducao .titulo {
     grid-column: 1/1
-  }
-}
-@media (max-width: 375px) {
-  .introducao {
-    grid-template-columns: 105px 1fr;
   }
 }
