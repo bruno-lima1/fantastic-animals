@@ -33,7 +33,30 @@
   height: 10px;
   left: -30px;
 }
-.time-open::after {
+.time-open {
+  display: none;
+}
+.time-close {
+  display: flex;
+}
+.time-close::after {
+  border: 2px solid #f5f5f7;
+  display: inline-block;
+  content: "";
+  width: 15px;
+  height: 15px;
+  background: #e30000;
+  border-radius: 50%;
+  margin: 0 0 1px 4px;
+  cursor: pointer;
+}
+[data-days].active .time-open {
+  display: flex;
+}
+[data-days].active .time-close {
+  display: none;
+}
+[data-days].active .time-open::after {
   border: 2px solid #f5f5f7;
   display: inline-block;
   content: "";
@@ -44,24 +67,10 @@
   margin: 0 0 1px 4px;
   cursor: pointer;
 }
-.time-open.active::after {
-  background: #e30000;
-}
-[data-days].active .time-open {
-  display: flex;
-}
-[data-days].active .time-close,
-[data-days] .time-open {
-  display: none;
-}
-.time-open,
-.time-close {
-  padding-left: 0.25rem;
-}
 .time-open::before,
 .time-close::before {
   content: "-";
-  padding: 0 0.25rem 0 .2rem;
+  padding: 0 0.25rem;
 }
 @media (max-width: 800px) {
   .contato {
